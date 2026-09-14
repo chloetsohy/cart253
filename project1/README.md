@@ -16,7 +16,7 @@ This website provides documentation of my prototyping work in CART 253. It showc
 
 Here are some examples of my personal works! I particularly enjoy illustration and brand designing!!
 
-![Illustration example 1](draw1.png) ![Illustration example 2](draw2.png)
+![Illustration example 1](draw1.jpg) ![Illustration example 2](draw2.jpg)
 
 
 
