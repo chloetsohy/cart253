@@ -14,9 +14,11 @@ This website provides documentation of my prototyping work in CART 253. It showc
 
 ## My Personal Work Examples
 
-Here are some examples of my personal works! I particularly enjoy illustration and brand designing!!
+Here are some examples of my personal works! I particularly enjoy exploring different creative mediums!!
 
-![Illustration example 1](images/draw1.jpg) ![Illustration example 2](images/draw2.jpg)
+![Illustration examples](images/illustration.png)
+  
+![3D Modelling example](images/3d%20modelling.jpg)
 
 
 
