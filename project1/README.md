@@ -15,7 +15,6 @@ This website provides documentation of my prototyping work in CART 253. It showc
 ## My Personal Work Examples
 
 Here are some examples of my personal works! I particularly enjoy exploring different creative mediums!!
-
 ![Illustration examples](images/illustration.png)
   
 ![3D Modelling example](images/3d%20modelling.jpg)
@@ -27,11 +26,10 @@ Here are some examples of my personal works! I particularly enjoy exploring diff
 
 ## Attribution
 
-This bit should attribute any code, assets or other elements used taken from other sources. For example:
-
+Below is a list of assets that have been used in this project:
 > - This project uses [p5.js](https://p5js.org).
-> - The clown image is a capture of the clown from the Apple emoji character set.
-> - The barking sound effect is "single dog bark 1" by crazymonke9 from freesound.org: https://freesound.org/people/crazymonke9/sounds/418107/
+> - The banner image is a evening blue sky from magnific.com: https://www.magnific.com/free-photos-vectors/evening-blue/46
+
 
 ## License
 
