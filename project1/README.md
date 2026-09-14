@@ -7,7 +7,7 @@ Welcome to my course website!
 
 ## Description
 
-This website provides documentation of my prototyping work in CART 253. This website showcase features a variety of interactive projects, experiments and creative experiments. 
+This website provides documentation of my prototyping work in CART 253. It showcase features a variety of interactive projects, experiments and creative experiments. 
 
 > *The Mayor of Clown Town* is a simulator experience that allows the user to control a small town populated entirely by clowns.
 
@@ -32,6 +32,6 @@ This bit should attribute any code, assets or other elements used taken from oth
 
 ## License
 
-This bit should include the license you want to apply to your work. For example:
+This work is produced by Chloe Tso as part of CART 253's coursework.
 
 > This project is licensed under a Creative Commons Attribution ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en)) license with the exception of libraries and other components with their own licenses.
