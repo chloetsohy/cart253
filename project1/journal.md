@@ -1,6 +1,6 @@
 # My reflective journal
 
-14/09/2026\
+14/09/2026
   
 Through this project of creating a website using Markdown and Github, I learnt firsthand how effective both tools can be Surprisingly, I found Markdown incredibly useful, as it avoided the complicated syntax that HTML has. Additionally, I particularly liked how easy and readable Markdown code is, allowing even beginners to follow. 
 

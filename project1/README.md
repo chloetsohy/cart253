@@ -5,18 +5,19 @@ Welcome to my course website!
 ![Website Banner](images/banner.jpg)
 
 
-## Description
+## Description of Website
 
 This website provides documentation of my prototyping work in CART 253. It showcase features a variety of interactive projects, experiments and creative experiments. 
 
 > *The Mayor of Clown Town* is a simulator experience that allows the user to control a small town populated entirely by clowns.
 
 
-## Screenshot(s)
+## My Personal Work Examples
 
-This bit should have some images of the program running so that the reader has a sense of what it looks like. For example:
+Here are some examples of my personal works! I particularly enjoy illustration and brand designing!!
 
-> ![Image of a clown face](./assets/images/clown.png)
+![Illustration example 1](draw1.png) ![Illustration example 2](draw2.png)
+
 
 
 ## Quick Links
