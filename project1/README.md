@@ -1,6 +1,6 @@
 # Chloe's Website
 
-Chloe Tso
+Welcome to my course website!
 
 ![Website Banner](images/banner.jpg)
 
@@ -12,9 +12,6 @@ This website provides documentation of my prototyping work in CART 253. This web
 
 > *The Mayor of Clown Town* is a simulator experience that allows the user to control a small town populated entirely by clowns.
 
-> The experience is controlled via the mouse, with left click selecting a clown and bringing up a menu of options such as "slip of banana peel" or "get into impossible capacious clown-car."
-
-> The project is meant to give the user a sense of what it would be the mayor of a town of clowns, eventually getting the sense that clowns are not taking their civic duties seriously.
 
 ## Screenshot(s)
 
