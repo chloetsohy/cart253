@@ -1,4 +1,4 @@
-# Chloe's Website
+# Chloe Tso's Website
 
 Welcome to my course website!
 
