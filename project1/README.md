@@ -9,7 +9,7 @@ Welcome to my course website!
 
 This website provides documentation of my prototyping work in CART 253. It showcase features a variety of interactive projects, experiments and creative experiments. 
 
-> *The Mayor of Clown Town* is a simulator experience that allows the user to control a small town populated entirely by clowns.
+> Looking forward to what I will achieve in this course!
 
 
 ## My Personal Work Examples
@@ -23,11 +23,12 @@ Here are some examples of my personal works! I particularly enjoy exploring diff
 
 ## Quick Links
 * [Read my reflective journal](journal.md)
+* [My other prototyping works (Coming soon!)]
 
 ## Attribution
 
 Below is a list of assets that have been used in this project:
-> - This project uses [p5.js](https://p5js.org).
+> - This project uses [Markdown](https://www.markdownguide.org/).
 > - The banner image is a evening blue sky from magnific.com: https://www.magnific.com/free-photos-vectors/evening-blue/46
 
 
