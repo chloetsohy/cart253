@@ -7,7 +7,7 @@ Welcome to my course website!
 
 ## Description of Website
 
-This website provides documentation of my prototyping work in CART 253. It showcase features a variety of interactive projects, experiments and creative experiments. 
+This website provides documentation of my prototyping work in CART 253. It features a variety of interactive projects and creative experiments. I hope to explore a range of creative mediums, from using javascript to p5.js to Figma, allowing myself to expand my insight towards prototyping and artistic expressions.
 
 > Looking forward to what I will achieve in this course!
 
