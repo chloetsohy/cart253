@@ -2,8 +2,6 @@
 
 Chloe Tso
 
-[View this project online](URL_FOR_THE_RUNNING_PROJECT)
-
 ## Description
 
 This project showcases my prototype for a house. it includes a house, a grassland and some clouds. Below is a the picture for the prototype:
