@@ -7,9 +7,9 @@ Through this project of creating a website using Markdown and Github, I learnt f
 Regarding Github, I found it challenging to navigate the platform. There were issues in setting up my repository as I found it confusing having to connect github.com with Github Desktop. After multiple rounds of trial and errors, I was able to start hosting the website successfully. Nevertheless, I believe this platform is really efficient at website publishing, given the simple steps of just pushing the changes to Github. This tool will significantly boost productivity and optimize the performance on the whole process of creating a website. 
 
 This website acts as the home of my artwork collection, and I hope it allows the future audience to resonate with the range of emotions I showcase through my work. I am planning to build projects that explore abstract ideas, specifically through shape configuration and colour palettes. Moreover, I hope by the interaction to this webpage, it evokes creative inspiration to others as well. 
-
-
-
+ 
+ 
+ 
 22/09/2026 - Prototyping instructions
 
 While making these prototypes, I was able to learn the basics of p5.js and utilise its features to create several drawings.  
