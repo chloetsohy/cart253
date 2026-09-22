@@ -12,8 +12,10 @@ This website provides documentation of my prototyping work in CART 253. It featu
 > Looking forward to what I will achieve in this course!
 
 
-## Quick Links
+## My Journal
 * [Read my reflective journal](journal.md)
+
+## Instruction Prototype Project
 * [My instruction prototyping project 1 (House)](https://chloetsohy.github.io/cart253/instructions-prototype-1/)
 * [My instruction prototyping project 2 (Abstract)](https://chloetsohy.github.io/cart253/instructions-prototype-2/)
 * [My instruction prototyping project 3 (Weird)](https://chloetsohy.github.io/cart253/instructions-prototype-3/)
