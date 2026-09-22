@@ -28,6 +28,8 @@ function draw() {
     drawShapes();
 }
 
+// draws the lines on the canvas background
+
 function drawLines() {
     fill('yellow');
     rect(0, 0, 400, 4);
@@ -89,6 +91,8 @@ function drawLines() {
 }
 
 
+// draws the black circles that connects the triangles
+
 function drawShapes() {
     fill('black');
     ellipse(50, 50, 50, 50);
@@ -105,14 +109,15 @@ function drawShapes() {
 
 }
 
+// draws the red triangles on the canvas
 
 function drawTriangles() {
-    fill('red');
+    fill('blue');
     triangle(250, 50, 150, 250, 50, 50);
 
-    fill('red');
+    fill('blue');
     triangle(350, 250, 250, 500, 150, 250);
 
-    fill('red');
+    fill('blue');
     triangle(250, 50, 450, 50, 350, 250);
 }
