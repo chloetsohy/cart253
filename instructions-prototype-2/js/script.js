@@ -33,7 +33,7 @@ function draw() {
 
 
 /**
- * Draw a grid rectangle background.
+ * Draw a grid square background.
  */
 function drawRectangle() {
     fill('brown');
@@ -45,7 +45,7 @@ function drawRectangle() {
 
 
 /**
- * Draw circle and rectangle shapes inside the brown rectangles.
+ * Draw circle and square shapes inside the brown squares.
  */
 function drawBrownInside() {
 
@@ -64,7 +64,7 @@ function drawBrownInside() {
 }
 
 /**
- * Draw triangle shapes inside the black rectangles.
+ * Draw triangle shapes inside the black squares.
  */
 function drawBLackInside() {
 
