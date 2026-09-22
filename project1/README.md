@@ -12,6 +12,13 @@ This website provides documentation of my prototyping work in CART 253. It featu
 > Looking forward to what I will achieve in this course!
 
 
+## Quick Links
+* [Read my reflective journal](journal.md)
+* [My instruction prototyping project 1 (House)](https://chloetsohy.github.io/cart253/instructions-prototype-1/)
+* [My instruction prototyping project 2 (Abstract)](https://chloetsohy.github.io/cart253/instructions-prototype-2/)
+* [My instruction prototyping project 3 (Weird)](https://chloetsohy.github.io/cart253/instructions-prototype-3/)
+
+
 ## My Personal Work Examples
 
 Here are some examples of my personal works! I particularly enjoy exploring different creative mediums!!
@@ -20,10 +27,6 @@ Here are some examples of my personal works! I particularly enjoy exploring diff
 ![3D Modelling example](images/3d%20modelling.jpg)
 
 
-
-## Quick Links
-* [Read my reflective journal](journal.md)
-* [My other prototyping works (Coming soon!)]
 
 ## Attribution
 
