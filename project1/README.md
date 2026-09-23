@@ -13,7 +13,7 @@ This website provides documentation of my prototyping work in CART 253. It featu
 
 
 ## My Journal
-* [Read my reflective journal](journal.md)
+* [Read my journals](journal.md)
 
 ## Instruction Prototype Project
 * [My instruction prototyping project 1 (The house)](https://chloetsohy.github.io/cart253/instructions-prototype-1/)
