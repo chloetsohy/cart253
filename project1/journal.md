@@ -1,4 +1,4 @@
-# My reflective journal
+# My REFLECTIVE JOURNAL
 
 ## 14/09/2026 - Prototyping my website
   
