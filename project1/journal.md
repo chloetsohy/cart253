@@ -1,6 +1,6 @@
 # My reflective journal
 
-# 14/09/2026 - Prototyping my website
+## 14/09/2026 - Prototyping my website
   
 Through this project of creating a website using Markdown and Github, I learnt firsthand how effective both tools can be Surprisingly, I found Markdown incredibly useful, as it avoided the complicated syntax that HTML has. Additionally, I particularly liked how easy and readable Markdown code is, allowing even beginners to follow. 
 
@@ -10,7 +10,7 @@ This website acts as the home of my artwork collection, and I hope it allows the
    
    
    
-# 22/09/2026 - Prototyping instructions
+## 22/09/2026 - Prototyping instructions
 
 While making these prototypes, I was able to learn the basics of p5.js and utilise its features to create several drawings. As p5 is relatively simple to code in, I was able to grasp the overall syntax pretty quickly. This provided me opportunities to delve into more creative approaches, such as making line patterns through precision of the x-y axes. 
 
