@@ -15,13 +15,22 @@ This website provides documentation of my prototyping work in CART 253. It featu
 ## My Journal
 * [Read my journals](journal.md)
 
-## Instruction Prototype Project
+## Instruction Prototypes
+
+### My Litle House
+![Prototype 1](images/prototype1_image.png)
 * [My instruction prototyping project 1 (The house)](https://chloetsohy.github.io/cart253/instructions-prototype-1/)
-> - Click here to view it's repository [Prototype 1](https://github.com/chloetsohy/cart253/tree/main/instructions-prototype-1)
+* Click here to view it's repository [Prototype 1](https://github.com/chloetsohy/cart253/tree/main/instructions-prototype-1)
+
+### Patterns
+![Prototype 2](images/prototype2_image.png)
 * [My instruction prototyping project 2 (Patterns)](https://chloetsohy.github.io/cart253/instructions-prototype-2/)
-> - Click here to view it's repository [Prototype 2](https://github.com/chloetsohy/cart253/tree/main/instructions-prototype-2)
+* Click here to view it's repository [Prototype 2](https://github.com/chloetsohy/cart253/tree/main/instructions-prototype-2)
+
+### Oddness
+![Prototype 3](images/prototype3_image.png)
 * [My instruction prototyping project 3 (Odd)](https://chloetsohy.github.io/cart253/instructions-prototype-3/)
-> - Click here to view it's repository [Prototype 3](https://github.com/chloetsohy/cart253/tree/main/instructions-prototype-3)
+* Click here to view it's repository [Prototype 3](https://github.com/chloetsohy/cart253/tree/main/instructions-prototype-3)
 
 
 ## My Personal Work Examples
