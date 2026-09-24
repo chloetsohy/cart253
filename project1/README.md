@@ -17,7 +17,7 @@ This website provides documentation of my prototyping work in CART 253. It featu
 
 ## Instruction Prototypes
 
-### My Litle House
+### My Little House
 ![Prototype 1](images/prototype1_image.png)
 * [Click here to view my house online](https://chloetsohy.github.io/cart253/instructions-prototype-1/)
 * Click here to view it's repository [Prototype 1](https://github.com/chloetsohy/cart253/tree/main/instructions-prototype-1)
