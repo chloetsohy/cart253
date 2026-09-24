@@ -1,10 +1,15 @@
 /**
- * Mr. Furious
- * Pippin Barr
- *
- * A guy who becomes visibly furious!
+ * Look at the bird!
+ * Chloe Tso, Charbel John Dagher,
+ * 
+ * This project showcases the use of variables to create a simple animation of a bird flying across the screen. 
+ * The bird's position and color are controlled by variables, and the background color changes over 
+ * time to simulate a sunset effect.
  */
 
+/** 
+ * Variables for the bird's position, size, and color
+ */
 "use strict";
 let bird = {
   x1: 0,
@@ -15,6 +20,8 @@ let bird = {
   y3: 200,
   x4: 50,
   y4: 180,
+  speed: 0.1,
+
   fill: {
     r: 255,
     g: 255,
@@ -88,10 +95,11 @@ function draw() {
   quad(bird.x1, bird.y1, bird.x4, bird.y4, bird.x2, bird.y2, bird.x3, bird.y3);
 
   if (bird.x1 < 400) {
-    bird.x1 += 2;
-    bird.x2 += 2;
-    bird.x3 += 2;
-    bird.x4 += 2;
+    bird.x1 += bird.speed;
+    bird.x2 += bird.speed;
+    bird.x3 += bird.speed;
+    bird.x4 += bird.speed;
+    bird.speed += 0.05;
 
     let x = bird.x1;
     bird.y1 = 30 * sin(x * 0.1) + 150;
