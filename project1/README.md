@@ -18,7 +18,8 @@ This website provides documentation of my prototyping work in CART 253. It featu
 
 ## Instruction Prototypes
 | My Little House | Patterns | Oddness |
-| --- | --- | --- |
+
+| :---: | :---: | :---: |
 
 | ![Prototype 1](images/prototype1_image.png) | ![Prototype 2](images/prototype2_image.png) | ![Prototype 3](images/prototype3_image.png) |
 
