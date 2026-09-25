@@ -21,7 +21,7 @@ This website provides documentation of my prototyping work in CART 253. It featu
 | My Little House | Patterns | Oddness |
 | :---: | :---: | :---: |
 | ![Prototype 1](images/prototype1_image.png) | ![Prototype 2](images/prototype2_image.png) | ![Prototype 3](images/prototype3_image.png) |
-| [View House Online](https://chloetsohy.github.io/cart253/instructions-prototype-1/)<br>[Repository](https://github.com/chloetsohy/cart253/tree/main/instructions-prototype-1) | [View Patterns Online](https://chloetsohy.github.io/cart253/instructions-prototype-2/)<br>[Repository](https://github.com/chloetsohy/cart253/tree/main/instructions-prototype-2) | [View Oddness Online](https://chloetsohy.github.io/cart253/instructions-prototype-3/)<br>[Repository](https://github.com/chloetsohy/cart253/tree/main/instructions-prototype-3) |
+| [View House Online](https://chloetsohy.github.io/cart253/instructions-prototype-1/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/instructions-prototype-1) | [View Patterns Online](https://chloetsohy.github.io/cart253/instructions-prototype-2/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/instructions-prototype-2) | [View Oddness Online](https://chloetsohy.github.io/cart253/instructions-prototype-3/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/instructions-prototype-3) |
 
 
 
