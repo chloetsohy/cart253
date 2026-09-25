@@ -9,115 +9,72 @@
 /**
  * This function sets up the canvas size.
 */
+let bluex = 200;
+let bluey = 200;
+let blueSpeedX = 4;
+let blueSpeedY = 3;
+let blueradius = 25;
+
+
+let redx = 200;
+let redy = 200;
+let redSpeedX = 8;
+let redSpeedY = 4;
+let redRadius = 25;
+
+
 function setup() {
     createCanvas(400, 400);
+
 }
 
 
-/**
- * This function identifies the background color and 
- * calls the functions to draw the shapes on the canvas.
+/*
+    * This function draws the canvas and the bouncing ellipses.
 */
 function draw() {
-    background('pink');
 
+    background(220);
+    let stripeWidth = 15; // width of each stripe
     noStroke();
 
-    drawLines();
-    drawTriangles();
-    drawShapes();
-}
-
-// draws the lines on the canvas background
-
-function drawLines() {
-    fill('yellow');
-    rect(0, 0, 400, 4);
-
-    fill('yellow');
-    rect(0, 396, 400, 4);
-
-    fill('yellow');
-    rect(0, 0, 4, 400);
-
-    fill('yellow');
-    rect(396, 0, 4, 400);
-
-
-    fill('yellow');
-    rect(25, 0, 4, 400);
-
-    fill('yellow');
-    rect(50, 0, 4, 400);
-
-    fill('yellow');
-    rect(75, 0, 4, 400);
-
-    fill('yellow');
-    rect(100, 0, 4, 400);
-
-    fill('yellow');
-    rect(125, 0, 4, 400);
-
-    fill('yellow');
-    rect(150, 0, 4, 400);
-
-    fill('yellow');
-    rect(175, 0, 4, 400);
-
-    fill('yellow');
-    rect(200, 0, 4, 400);
-
-    fill('yellow');
-    rect(225, 0, 4, 400);
-
-    fill('yellow');
-    rect(250, 0, 4, 400);
-
-    fill('yellow');
-    rect(275, 0, 4, 400);
-
-    fill('yellow');
-    rect(300, 0, 4, 400);
-
-    fill('yellow');
-    rect(325, 0, 4, 400);
-
-    fill('yellow');
-    rect(350, 0, 4, 400);
-
-    fill('yellow');
-    rect(375, 0, 4, 400);
-}
-
-
-// draws the black circles that connects the triangles
-
-function drawShapes() {
-    fill('black');
-    ellipse(50, 50, 50, 50);
-
-    fill('black');
-    ellipse(250, 50, 50, 50);
-
-    fill('black');
-    ellipse(150, 250, 50, 50);
-
-    fill('black');
-    ellipse(350, 250, 50, 50);
-
-
-}
-
-// draws the red triangles on the canvas
-
-function drawTriangles() {
+    // draw the stripes with alternating colors
+    for (let x = 0; x < width; x += stripeWidth) {
+        if (x % 10 == 0) {
+            fill('#FAE6E7');
+        } else {
+            fill('lightyellow');
+        }
+        rect(x, 0, stripeWidth, height);
+    }
     fill('blue');
-    triangle(250, 50, 150, 250, 50, 50);
+    // draw the blue eclipse
+    ellipse(bluex, bluey, blueradius * 2, blueradius * 2);
 
-    fill('blue');
-    triangle(350, 250, 250, 500, 150, 250);
+    //moves the eclipse
+    bluex += blueSpeedX;
+    bluey += blueSpeedY;
 
-    fill('blue');
-    triangle(250, 50, 450, 50, 350, 250);
+    // bounce off left or right walls
+    if (bluex > width - blueradius || bluex < blueradius) {
+        blueSpeedX *= -1;
+    }
+
+    // bounce off top or bottom walls
+    if (bluey > height - blueradius || bluey < blueradius) {
+        blueSpeedY *= -1;
+    }
+
+
+    // draw the red eclipse
+    fill('red');
+    ellipse(redx, redy, redRadius * 2, redRadius * 2);
+
+    // 2. Move the ellipse
+    redx += redSpeedX;
+
+    // 3. Check for wall collisions (Bounce logic)
+    if (redx + redRadius >= width || redx - redRadius <= 0) {
+        redSpeedX *= -1; // Reverse the direction
+    }
 }
