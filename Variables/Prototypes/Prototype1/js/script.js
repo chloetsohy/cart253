@@ -7,7 +7,8 @@
 
 "use strict";
 
-const WORD = "longerwordtester";
+// variables here are all fixed in the rest of the code
+const WORD = "transformative";
 const ROW_COUNT = 12;
 const OPEN_TIME = 500;
 const HOLD_TIME = 50;
@@ -19,11 +20,12 @@ const SIDE_PADDING = 28;
 let rowHeight;
 
 /**
- * Sets up the canvas and initializes the animation.
+ * Sets up the canvas and initializes animation.
  */
 function setup() {
+    // declaring the canvas size, font, and text alignment
     createCanvas(650, 400);
-    textFont("monospace");
+    textFont("roboto");
     smooth();
     textSize(20);
     textAlign(CENTER, CENTER);
@@ -31,15 +33,15 @@ function setup() {
 }
 
 function draw() {
-    background('lightblue');
-    const elapsed = millis();
+    background('seagreen');
+    const elapsed = millis(); // time since the animation started
 
+    // loop through each row and draw the word with the correct spread progress
     for (let row = 0; row < ROW_COUNT; row++) {
         const rowStart = row * ROW_DELAY;
         const timeSinceStart = elapsed - rowStart;
-        const rowProgress = timeSinceStart < 0
-            ? 0
-            : getSpreadProgress(timeSinceStart % LOOP_TIME);
+        const rowProgress = timeSinceStart < 0 ? 0: getSpreadProgress(timeSinceStart % LOOP_TIME); 
+        // conditional to ensure that the rowProgress is 0 if the row hasn't started yet
         drawWord(rowHeight * (row + 1), rowProgress);
     }
 }
