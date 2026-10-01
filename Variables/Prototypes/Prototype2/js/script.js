@@ -16,7 +16,7 @@ const mouseCursorSize = 50;
  * created canvas
 */
 function setup() {
-    createCanvas(1728, 1117);
+    createCanvas(1800, 1200);
     noCursor();
 }
 
