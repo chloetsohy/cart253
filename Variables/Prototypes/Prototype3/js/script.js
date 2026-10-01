@@ -6,7 +6,7 @@
  */
 
 "use strict";
-
+// defining variables
 let base = undefined;
 let skin = undefined;
 let eyewhite = undefined;
