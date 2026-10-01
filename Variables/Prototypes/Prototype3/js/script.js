@@ -8,17 +8,18 @@
 
 "use strict";
 
-/**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
-*/
-function setup() {
+let faceImg;
 
+function preload() {
+    faceImg = loadImage('assets/images/base.png');
 }
 
+function setup() {
+    createCanvas(600, 600);
+}
 
-/**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
-*/
 function draw() {
+    background('pink');
+    image(faceImg, 0, 0, 600, 600);
 
 }
