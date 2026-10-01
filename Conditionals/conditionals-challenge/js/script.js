@@ -10,19 +10,25 @@ const puck = {
   x: 200,
   y: 200,
   size: 100,
-  fill: "#ff0000"
+  fill: "#ff0000",
+  velocity: {
+    x: 0,
+    y: 0
+  },
+  acceleration: 0.987
 };
 
 const user = {
   x: undefined, // will be mouseX
   y: undefined, // will be mouseY
   size: 75,
+  velocity: 1,
   fill: "#000000"
 };
 
 const target = {
-  x: 300,
-  y: 100,
+  x: 900,
+  y: 200,
   size: 100,
   fill: "#00ff00"
 }
@@ -31,7 +37,8 @@ const target = {
  * Create the canvas
  */
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(1200, 600);
+  noCursor();
 }
 
 /**
@@ -48,8 +55,25 @@ function draw() {
   drawPuck();
   movePuck();
   checkTarget();
-
+  keepInBounds();
 }
+
+
+function keepInBounds() {
+  if (puck.x < 0) {
+    puck.x = 0;
+  }
+  if (puck.x > width) {
+    puck.x = width;
+  }
+  if (puck.y < 0) {
+    puck.y = 0;
+  }
+  if (puck.y > height) {
+    puck.y = height;
+  }
+}
+
 
 /**
  * Sets the user position to the mouse position
@@ -92,15 +116,30 @@ function drawTarget() {
 
 function movePuck() {
 
+
   const d = dist(user.x, user.y, puck.x, puck.y);
   const overlap = (d < user.size / 2 + puck.size / 2);
 
   if (overlap) {
-    puck.x = puck.x + (puck.x - user.x) * 0.1;
-    puck.y = puck.y + (puck.y - user.y) * 0.1;
+    // puck.speed *= puck.acceleration;
+
+
+    // if (overlap) {
+
+    puck.velocity.x = (puck.x - user.x) * 0.1;
+    puck.velocity.y = (puck.y - user.y) * 0.1;
+
+
+
   }
+  puck.x += puck.velocity.x;
+  puck.y += puck.velocity.y;
+
+  puck.velocity.x *= puck.acceleration;
+  puck.velocity.y *= puck.acceleration;
 
 }
+
 
 
 function checkTarget() {
@@ -109,5 +148,9 @@ function checkTarget() {
 
   if (overlap) {
     target.fill = "#0000ff";
+  }
+
+  else {
+    target.fill = "#00ff00";
   }
 }
