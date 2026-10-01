@@ -8,18 +8,30 @@
 
 "use strict";
 
-let faceImg;
+let base = undefined;
+let skin = undefined;
+let eyewhite = undefined;
+let pupils = undefined;
 
-function preload() {
-    faceImg = loadImage('assets/images/base.png');
+async function preload() { // add async 
+    base = await loadImage('./assets/images/base.png'); // add await
+    skin = await loadImage('./assets/images/skin.png');
+    eyewhite = await loadImage('./assets/images/eyewhite.png');
+    pupils = await loadImage('./assets/images/pupils.png');
 }
 
-function setup() {
+async function setup() {
     createCanvas(600, 600);
+    await preload(); // call preload with await
 }
 
 function draw() {
-    background('pink');
-    image(faceImg, 0, 0, 600, 600);
+    background('navy');
+    image(skin, 0, 0, 600, 600);
+    image(eyewhite, 0, 0, 600, 600);
+    image(pupils, 0, 0, 600, 600);
+    image(base, 0, 0, 600, 600);
 
+
+    
 }

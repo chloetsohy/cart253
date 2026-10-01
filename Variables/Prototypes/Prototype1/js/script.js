@@ -20,7 +20,7 @@ const SIDE_PADDING = 28;
 let rowHeight;
 
 /**
- * Sets up the canvas and initializes animation.
+ * sets up the canvas and initializes animation.
  */
 function setup() {
     // declaring the canvas size, font, and text alignment
@@ -40,7 +40,7 @@ function draw() {
     for (let row = 0; row < ROW_COUNT; row++) {
         const rowStart = row * ROW_DELAY;
         const timeSinceStart = elapsed - rowStart;
-        const rowProgress = timeSinceStart < 0 ? 0: getSpreadProgress(timeSinceStart % LOOP_TIME); 
+        const rowProgress = timeSinceStart < 0 ? 0 : getSpreadProgress(timeSinceStart % LOOP_TIME);
         // conditional to ensure that the rowProgress is 0 if the row hasn't started yet
         drawWord(rowHeight * (row + 1), rowProgress);
     }
