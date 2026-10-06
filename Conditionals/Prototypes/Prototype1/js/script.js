@@ -39,5 +39,15 @@ function setup() {
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
+    background(255);
 
+    if (mouseIsPressed) {
+        let currentX = floor(mouseX / gridSize);
+        let currentY = floor(mouseY / gridSize)
+
+
+        if (currentX >= 0 && currentX <= gridSize && currentY >= 0 && currentY <= gridSize) {
+            grid[currentX][currentY] = 1;
+        }
+    }
 }
