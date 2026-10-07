@@ -38,8 +38,8 @@ function draw() {
     strokeWeight(1);
 
     if (mouseX < width / 2 && mouseY < height / 2) {
-        targetstroke = color('lavender');
-        targetbg = color('MidnightBlue');
+        targetstroke = color('midnightBlue');
+        targetbg = color('lavender');
     }
 
     else if (mouseX > width / 2 && mouseY < height / 2) {
@@ -62,6 +62,9 @@ function draw() {
 
     background(currentbg);
     stroke(currentstroke);
+
+    rotateY(map(mouseX, 0, width, HALF_PI, -HALF_PI));
+    rotateX(map(mouseY, 0, height, HALF_PI, -HALF_PI));
 
     // Draw sphere with radius 100
     // Lower detail parameters (e.g., 12, 12) make a low-poly wireframe look
