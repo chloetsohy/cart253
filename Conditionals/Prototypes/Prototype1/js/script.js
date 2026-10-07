@@ -7,7 +7,7 @@
 
 "use strict";
 
-let gridSize = 10;
+let gridSize = 15;
 let columns, rows;
 let grid = [];
 
@@ -17,7 +17,7 @@ let grid = [];
 function setup() {
 
     createCanvas(700, 700);
-    background('black');
+    background('white');
 
     columns = width / gridSize;
     rows = height / gridSize;
@@ -26,10 +26,11 @@ function setup() {
 
     // Initializing the grid
     for (let i = 0; i < columns; i++) {
-        grid[i] = [];
+    for (let x = 0; x < columns; x++) {
+        grid[x] = [];
 
-        for (let j = 0; j < rows; j++) {
-            grid[i][j] = 0;
+        for (let y = 0; y < rows; y++) {
+            grid[x][y] = 0;
         }
     }
 
@@ -40,14 +41,17 @@ function setup() {
 */
 function draw() {
     background(255);
-
+    // determining which x and y grid position cursor is on
     if (mouseIsPressed) {
         let currentX = floor(mouseX / gridSize);
         let currentY = floor(mouseY / gridSize)
 
-
-        if (currentX >= 0 && currentX <= gridSize && currentY >= 0 && currentY <= gridSize) {
+        // verifying it is inside before changing the colour
+        if (currentX >= 0 && currentX < columns && currentY >= 0 && currentY < rows) {
             grid[currentX][currentY] = 1;
         }
     }
+
+
+
 }
