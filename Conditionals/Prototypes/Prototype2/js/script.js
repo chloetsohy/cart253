@@ -17,13 +17,15 @@ let speed = 0.05;
 */
 
 function setup() {
-    createCanvas(700, 700, WEBGL);
+    createCanvas(windowWidth, windowHeight, WEBGL);
 
 
     currentbg = color('lavender');
     currentstroke = color('midnightBlue');
     targetbg = color('hotpink');
     targetstroke = color('lemonChiffon');
+
+    noCursor();
 
 }
 
@@ -63,8 +65,8 @@ function draw() {
     background(currentbg);
     stroke(currentstroke);
 
-    rotateY(map(mouseX, 0, width, HALF_PI, -HALF_PI));
-    rotateX(map(mouseY, 0, height, HALF_PI, -HALF_PI));
+    rotateY(map(mouseX, 0, width, -HALF_PI, HALF_PI));
+    rotateX(map(mouseY, 0, height, -HALF_PI, HALF_PI));
 
     // Draw sphere with radius 100
     // Lower detail parameters (e.g., 12, 12) make a low-poly wireframe look
