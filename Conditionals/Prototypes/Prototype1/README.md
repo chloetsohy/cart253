@@ -1,4 +1,4 @@
-# Variables Prototype 2
+# Conditionals Prototype 1
 
 Chloe Tso
 
