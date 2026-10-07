@@ -36,7 +36,7 @@ function setup() {
 }
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * This draw function checks if mouse is pressed and if it is, it checks the box cursor is currently in before filling in the colour.
 */
 function draw() {
     background(255);
@@ -52,6 +52,7 @@ function draw() {
     }
 
 
+    // drawing and filling in the grid boxes
     for (let x = 0; x < columns; x++) {
         for (let y = 0; y < rows; y++) {
             if (grid[x][y] == 1) {
