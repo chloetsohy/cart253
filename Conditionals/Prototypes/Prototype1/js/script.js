@@ -52,5 +52,17 @@ function draw() {
     }
 
 
+    for (let x = 0; x < columns; x++) {
+        for (let y = 0; y < rows; y++) {
+            if (grid[x][y] == 1) {
+                fill(28, 40, 128);
+            }
+            else fill('white');
 
+
+            stroke(134, 143, 209);
+
+            rect(x * gridSize, y * gridSize, gridSize, gridSize);
+        }
+    }
 }
