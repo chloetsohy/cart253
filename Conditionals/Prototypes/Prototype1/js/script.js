@@ -12,7 +12,7 @@ let columns, rows;
 let grid = [];
 
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Set up canvas using a grid system. It uses 2 variables: columns and rows to determine the num of boxes in the grid.
 */
 function setup() {
 
