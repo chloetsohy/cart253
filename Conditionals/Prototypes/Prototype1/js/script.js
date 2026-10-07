@@ -25,7 +25,6 @@ function setup() {
 
 
     // Initializing the grid
-    for (let i = 0; i < columns; i++) {
     for (let x = 0; x < columns; x++) {
         grid[x] = [];
 
