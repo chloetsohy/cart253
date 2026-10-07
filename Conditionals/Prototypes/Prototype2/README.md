@@ -4,8 +4,9 @@ Chloe Tso
 
 ## Description
 
-This project showcases my prototype for conditional. It is a pixel art game that draws the user's cursor positions when the mouse is clicked. For loops are utilized to identify which position is pressed.
-![Pixel Game](conditionals1.png)
+This project is a 3D orbiting sphere that changes colours based on the position of the cursor. It tracks the x and y locations, ad uses if statements to alter the wireframe stroke colour and background colour based on it.
+
+![Colour Spins](conditionals2.png)
 
 ## Attribution
 
