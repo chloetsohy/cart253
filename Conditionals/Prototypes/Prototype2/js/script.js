@@ -2,20 +2,22 @@
  * Title of Project
  * Chloe Tso
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * This is an interactive 3D orbiting sphere that changes colour based on the mouse's position on the canvas. 
  */
 
 "use strict";
 
+
+// variables to identify the current and target colours for the mouse positions 
 let currentbg, currentstroke;
 let targetbg, targetstroke;
 
 let speed = 0.05;
-/**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
-*/
 
+
+/**
+ * the setup initializes canvas size as the window size, and has initial colours for current and target. 
+*/
 function setup() {
     createCanvas(windowWidth, windowHeight, WEBGL);
 
@@ -29,6 +31,7 @@ function setup() {
 
 }
 
+
 function draw() {
     background('white');
 
@@ -39,6 +42,8 @@ function draw() {
     noFill();
     strokeWeight(1);
 
+
+    // changing colours based on the conditions of the cursor's position on the canvas
     if (mouseX < width / 2 && mouseY < height / 2) {
         targetstroke = color('midnightBlue');
         targetbg = color('lavender');
