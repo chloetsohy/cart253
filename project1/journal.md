@@ -31,3 +31,6 @@ What surprised me most was how a subtle shift in these numeric values led to a c
 I hope to explore more complex and abstract ideas in the future, such as possibly using variables to create moving 3D wireframes. Below attached is a project I really admire, and would love to develop my skills further to create something like this. 
 
 ![Variables example](images/variable-image.jpeg)
+
+
+## 08/10/2026 - Prototyping conditionals
