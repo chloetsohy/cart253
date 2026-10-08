@@ -34,3 +34,4 @@ I hope to explore more complex and abstract ideas in the future, such as possibl
 
 
 ## 08/10/2026 - Prototyping conditionals
+Through prototyping using conditionals, I was able to learnt 
