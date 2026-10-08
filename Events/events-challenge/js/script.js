@@ -1,6 +1,5 @@
 /**
- * The Only Move Is Not To Play
- * Pippin Barr
+ * Chloe Tso, Charbel John Dagher, Alejandro Bernabe, Agustin Max Lee
  *
  * A game where your score increases so long as you do nothing.
  */
@@ -11,6 +10,12 @@
 let score = 0;
 let loseSound = undefined;
 let state = false;
+let gameState = "menu";
+
+let countdown = 2 * 1000;
+
+
+
 
 // Is the game over?
 let gameOver = false;
@@ -33,16 +38,41 @@ function draw() {
     background("#87ceeb");
 
     // Only increase the score if the game is not over
-    if (!gameOver) {
-        // Score increases relatively slowly
-        score += 0.05;
+
+    if (gameState === "menu") {
+        menu();
     }
-    displayUI();
+    else if (gameState === "game") {
+        if (!gameOver) {
+            // Score increases relatively slowly
+            score += 0.05;
+        }
+        displayUI();
+    }
 }
+
+
+function menu() {
+    push();
+    background("pink");
+    textSize(48);
+    textStyle(BOLD);
+    textAlign(CENTER, CENTER);
+    text("Click to start\n(Wait 2 secs)", width / 2, height / 2);
+
+    pop();
+
+    if (mouseIsPressed) {
+        startCountdown();
+    }
+
+}
+
+
 
 /**
  * Show the game over message if needed, and the current score
- */
+*/
 function displayUI() {
     if (gameOver) {
         push();
@@ -53,6 +83,13 @@ function displayUI() {
         pop();
     }
     displayScore();
+
+
+}
+
+
+function changeState() {
+    gameState = "game";
 }
 
 /**
@@ -69,18 +106,18 @@ function displayScore() {
 
 
 function lose() {
-    gameOver = true;
+    if (gameState === "game") {
+        gameOver = true;
 
-    if (state == false) {
-        loseSound.play();
+        if (state == false) {
+            loseSound.play();
+        }
+        state = true;
     }
-    state = true;
 
 }
-
 function keyPressed() {
     lose();
-
 }
 
 function mousePressed() {
@@ -90,10 +127,13 @@ function mousePressed() {
 function mouseMoved() {
     lose();
 }
-
-
 document.addEventListener("visibilitychange", () => {
     if (document.hidden) {
         lose();
     }
 });
+
+
+function startCountdown() {
+    setTimeout(changeState, countdown)
+}
