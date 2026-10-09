@@ -2,16 +2,19 @@
  * What's your luck?
  * Chloe Tso
  * 
- * This is a simple game for users to test their luck. 
+ * This is a simple game for users to test their luck. When users click on the bubble, they get a random sea animal. The game also plaus a sound when the bubble is popped.
 */
 
 "use strict";
+
+
+// variables
 let luck = undefined;
 let sound = undefined;
 let hasPlayed = false;
 
 /**
- * Create the canvas
+ * Create the canvas, loaded the sound
  */
 async function setup() {
     createCanvas(400, 400);
@@ -19,6 +22,8 @@ async function setup() {
     sound = await loadSound("assets/sounds/bubble.mp3");
 }
 
+
+// probability distribution for the loot using random 
 function mousePressed() {
     const loot = random();
 
@@ -37,11 +42,13 @@ function mousePressed() {
 }
 
 /**
- * Display the resulting drop on this run
+ * Display the resulting drop, and play the sound when the bubble is popped
  */
 function draw() {
     background("lightblue");
 
+
+    // display the result of the loot when the bubble is popped
     if (mouseIsPressed && luck !== undefined) {
         if (!hasPlayed) {
             sound.play();
@@ -54,6 +61,7 @@ function draw() {
         text(luck, width / 2, height / 2);
     }
 
+    // display the bubble when the mouse is not pressed and resets the sound played 
     else if (!mouseIsPressed) {
         hasPlayed = false;
         fill("#f5f5f5");
