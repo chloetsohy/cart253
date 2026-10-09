@@ -7,12 +7,16 @@
 
 "use strict";
 let luck = undefined;
+let sound = undefined;
+let hasPlayed = false;
 
 /**
  * Create the canvas
  */
-function setup() {
+async function setup() {
     createCanvas(400, 400);
+
+    sound = await loadSound("assets/sounds/bubble.mp3");
 }
 
 function mousePressed() {
@@ -38,7 +42,11 @@ function mousePressed() {
 function draw() {
     background("lightblue");
 
-    if (mousePressed && luck !== undefined) {
+    if (mouseIsPressed && luck !== undefined) {
+        if (!hasPlayed) {
+            sound.play();
+            hasPlayed = true;
+        }
         textAlign(CENTER, CENTER);
         textStyle(BOLD);
         textSize(18);
@@ -46,7 +54,8 @@ function draw() {
         text(luck, width / 2, height / 2);
     }
 
-    else {
+    else if (!mouseIsPressed) {
+        hasPlayed = false;
         fill("#f5f5f5");
         ellipse(width / 2, height / 2, 200, 200);
         noStroke();
