@@ -36,5 +36,27 @@ function mousePressed() {
  * Display the resulting drop on this run
  */
 function draw() {
+    background("lightblue");
+
+    if (mousePressed && luck !== undefined) {
+        textAlign(CENTER, CENTER);
+        textStyle(BOLD);
+        textSize(18);
+        fill("#222222");
+        text(luck, width / 2, height / 2);
+    }
+
+    else {
+        fill("#f5f5f5");
+        ellipse(width / 2, height / 2, 200, 200);
+        noStroke();
+
+        textAlign(CENTER, CENTER);
+        textStyle(BOLD);
+        textSize(18);
+        fill("hotpink");
+        text("Pop me!", width / 2, height / 2);
+    }
+
 
 }
