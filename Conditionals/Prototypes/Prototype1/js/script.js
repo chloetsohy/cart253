@@ -42,7 +42,7 @@ function draw() {
     background(255);
     // determining which x and y grid position cursor is on
     if (mouseIsPressed) {
-        let currentX = floor(mouseX / gridSize);
+        let currentX = floor(mouseX / gridSize); // floor helps with rounding down to the nearest whole number
         let currentY = floor(mouseY / gridSize)
 
         // verifying it is inside before changing the colour

@@ -37,7 +37,7 @@ This website provides documentation of my prototyping work in CART 253. It featu
 | Pixel Art Game | Colour Spins | What's your luck? |
 | :---: | :---: | :---: |
 | ![Prototype 1](images/conditionals1.png) | ![Prototype 2](images/conditionals2.jpg) | ![Prototype 3](images/conditionals3.png) |
-| [View Flowy Online](https://chloetsohy.github.io/cart253/Conditionals/Prototypes/Prototype1/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Conditionals/Prototypes/Prototype1) | [View Patterns Online](https://chloetsohy.github.io/cart253/Conditionals/Prototypes/Prototype2/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Conditionals/Prototypes/Prototype2) | [View Tomato Vision Online](https://chloetsohy.github.io/cart253/Conditionals/Prototypes/Prototype3/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Conditionals/Prototypes/Prototype3) |
+| [View Pixel Art Game Online](https://chloetsohy.github.io/cart253/Conditionals/Prototypes/Prototype1/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Conditionals/Prototypes/Prototype1) | [View Colour Spins Online](https://chloetsohy.github.io/cart253/Conditionals/Prototypes/Prototype2/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Conditionals/Prototypes/Prototype2) | [View What's your luck Online](https://chloetsohy.github.io/cart253/Conditionals/Prototypes/Prototype3/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Conditionals/Prototypes/Prototype3) |
    
 
 ## My Personal Work Examples

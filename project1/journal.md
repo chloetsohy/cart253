@@ -34,4 +34,12 @@ I hope to explore more complex and abstract ideas in the future, such as possibl
 
 
 ## 08/10/2026 - Prototyping conditionals
-Through prototyping using conditionals, I was able to learnt 
+Through prototyping using conditionals, I was able to learnt a lot on using phyiscal interaction to produce an artwork. Conditionals allowed me to explore how code respond to human input. For example for my 2nd prototype, by changing the cursor's position based the movement, I was able to utilize if statements to change the colour of the wireframe and background. 
+
+One challenge I faced was for the pixel art game. Initially I was quite skeptical with how the logistics would work, especially for filling in a box colour. Therefore, I decided to try is mouseIsPressed, which allowed me to detect the mouse's interactions in order to fill that specific spot in with a fill colour. After discovering this function, I ended up using it for my last prototype too, and was able to explore sound effects as well. 
+
+What surprised me the most was how easy and simple manipulating if statements was. The syntax of it allows a simplistic way for conditionals, and I find it very helpful in the process of learning it. 
+
+As I quite enjoyed these prototypes, I hope to utilize more of what I learnt this lesson on conditionals, and include it in all my future works. One example is below, where I hope to change the text's texture based on the cursor movements.
+
+![Conditionals example](images/conditionals-example.gif)
