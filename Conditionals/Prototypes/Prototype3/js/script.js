@@ -2,51 +2,39 @@
  * What's your luck?
  * Chloe Tso
  * 
- * This is a simple game for users to test their luck. The user will be prompted to guess a number from 1- 10, and the program will generate a random number in that range. If the user's guess matches the random number, they win. 
+ * This is a simple game for users to test their luck. 
 */
 
 "use strict";
+let luck = undefined;
 
-let input;
-let randomNum;
-let result = "";
 /**
- * Sets up the canvas for the game.
-*/
+ * Create the canvas
+ */
 function setup() {
-    createCanvas(500, 500);
-
-    background("lightblue");
-
-    input = createInput();
-    input.center();
-    input.elt.addEventListener("keydown", checkGuess);
-
-    randomNum = (random(1, 10));
+    createCanvas(400, 400);
 }
 
-function checkGuess(event) {
-    if (event.key === "Enter") {
-        const guess = Number(input.value());
-        if (guess === randomNum) {
-            result = "You win!";
-        } else {
-            result = "You lose!";
-        }
+function mousePressed() {
+    const loot = random();
+
+    if (loot < 0.1) {
+        luck = "You got the ultra rare golden shark!";
+    }
+    else if (loot < 0.2) {
+        luck = "You got a super rare rainbow fish!";
+    }
+    else if (loot < 0.3) {
+        luck = "Woah! A rare jellyfish!";
+    }
+    else {
+        luck = "Just another common fish...";
     }
 }
 
+/**
+ * Display the resulting drop on this run
+ */
 function draw() {
-    if (result === "You win!") {
-        background("green");
-    } else if (result === "You lose!") {
-        background("red");
-    }
 
-    textAlign(CENTER, TOP);
-    fill("black");
-    textSize(32);
-    text(result, width / 2, height / 2 - 80);
-    textSize(20);
-    text("Guess a number from 1 to 10", width / 2, height / 2 - 35);
 }
