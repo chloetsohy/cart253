@@ -32,3 +32,29 @@ function draw() {
         drawGameOver();
     }
 }
+
+
+// MENU
+function drawMenu() {
+
+    // welcome message
+    fill(255);
+    textSize(32);
+    textAlign(CENTER, CENTER);
+    text("Welcome to the rhythm game!", width / 2, height / 2 - 50);
+    textSize(24);
+    text("Press anywhere to start", width / 2, height / 2);
+    textFont("Monospace");
+
+
+    // once user pressed key or mouse, the game state changes to game and timer begins
+    if (mouseIsPressed || keyIsPressed) {
+        gameState = "game";
+        startTime = millis(); // starting timer
+        score = 0;
+        feedbackText = ""; 
+        w = 325; 
+        h = 325;
+        isCircleVisible = true;
+    }
+}
