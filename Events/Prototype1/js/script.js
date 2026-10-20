@@ -1,9 +1,16 @@
+/**
+ * Rhythm game
+ * Chloe Tso
+ * 
+ * This is a rhythm game that tests your reaction skills. It uses implementations of conditionals and functions to create a menu, playing and end game page.
+ */
+
 "use strict";
 
 // variable declarations
 let gameState = "menu"; // default state is menu
 let score = 0;
-let shrink = 4;
+let shrink = 6;
 let w = 325;
 let h = 325;
 
@@ -34,6 +41,7 @@ function draw() {
 }
 
 
+
 // MENU
 function drawMenu() {
 
@@ -55,37 +63,38 @@ function drawMenu() {
         feedbackText = ""; 
         w = 325; 
         h = 325;
-        isCircleVisible = true;
+        isCircleVisible = true; // enable circle visibility for the new game
     }
 }
 
-
-
 function drawGame() {
-    // 1. Check if 10 seconds have passed
+    // Check if 10 seconds have passed
     let elapsedTime = millis() - startTime;
-    if (elapsedTime >= gameDuration) {
+    if (elapsedTime >= gameDuration) { // if bigger than 10 seconds, end game
         gameState = "gameOver";
     }
 
     // Calculate remaining time to show the user
     let remainingTime = Math.ceil((gameDuration - elapsedTime) / 1000);
 
+    // instruction display on the screen
     strokeWeight(1);
     noStroke();
     fill(255);
     textSize(20);
     textAlign(CENTER, CENTER);
     text("Press 'space' when it reaches the circle target!", width / 2, height / 2 - 300);
-    text("Score: " + score, width / 2, height / 2 - 250);
+    text("Score: " + score, width / 2, height / 2 - 250); 
     
-    // Display the feedback text below the score
+    // display the feedback text below the score
     text(feedbackText, width / 2, height / 2 - 210);
 
     // Display the timer countdown
     text("Time Left: " + remainingTime + "s", width / 2, height / 2 - 170);
 
-    // --- DRAW GLOW EFFECT ---
+    //--- DRAW THE GLOWING EFFECT --- 
+    // this will be triggered in keypressed below.
+    // if glow amount is bigger than 0, make a semi-transparent stroke for the glow
     if (glowAmount > 0) {
         noFill();
         // Semi-transparent pink stroke for the glow aura
@@ -93,7 +102,7 @@ function drawGame() {
         strokeWeight(glowAmount);
         ellipse(width / 2, height / 2, 150, 150);
         
-        // Fade the glow out across frames
+        // Fading the glow out across frames
         glowAmount -= 1.5; 
     }
 
@@ -103,8 +112,8 @@ function drawGame() {
     strokeWeight(3);
     ellipse(width / 2, height / 2, 150, 150);
     
-    // Update the shrinking dimensions (happens in background even if hidden)
-    w -= shrink;
+    // Updating the shrinking dimensions
+    w -= shrink; // slowly shrinks based on the shrink amount
     h -= shrink;
 
     // Draw the shrinking circle only if it hasn't been struck yet
@@ -130,6 +139,7 @@ function drawGame() {
         isCircleVisible = true; 
     }
 }
+
 
 // GAME OVER
 // displays the game over message
@@ -192,3 +202,5 @@ function keyPressed() {
         }
     }
 }
+
+
