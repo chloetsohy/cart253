@@ -58,3 +58,75 @@ function drawMenu() {
         isCircleVisible = true;
     }
 }
+
+
+
+function drawGame() {
+    // 1. Check if 10 seconds have passed
+    let elapsedTime = millis() - startTime;
+    if (elapsedTime >= gameDuration) {
+        gameState = "gameOver";
+    }
+
+    // Calculate remaining time to show the user
+    let remainingTime = Math.ceil((gameDuration - elapsedTime) / 1000);
+
+    strokeWeight(1);
+    noStroke();
+    fill(255);
+    textSize(20);
+    textAlign(CENTER, CENTER);
+    text("Press 'space' when it reaches the circle target!", width / 2, height / 2 - 300);
+    text("Score: " + score, width / 2, height / 2 - 250);
+    
+    // Display the feedback text below the score
+    text(feedbackText, width / 2, height / 2 - 210);
+
+    // Display the timer countdown
+    text("Time Left: " + remainingTime + "s", width / 2, height / 2 - 170);
+
+    // --- DRAW GLOW EFFECT ---
+    if (glowAmount > 0) {
+        noFill();
+        // Semi-transparent pink stroke for the glow aura
+        stroke(255, 192, 203, 100); 
+        strokeWeight(glowAmount);
+        ellipse(width / 2, height / 2, 150, 150);
+        
+        // Fade the glow out across frames
+        glowAmount -= 1.5; 
+    }
+
+    // Draw the target circle (diameter 150, so radius is 75)
+    noFill();
+    stroke(255);
+    strokeWeight(3);
+    ellipse(width / 2, height / 2, 150, 150);
+    
+    // Update the shrinking dimensions (happens in background even if hidden)
+    w -= shrink;
+    h -= shrink;
+
+    // Draw the shrinking circle only if it hasn't been struck yet
+    if (isCircleVisible) {
+        noFill();
+        stroke('pink');
+        strokeWeight(3);
+        ellipse(width / 2, height / 2, w, h);
+    }
+
+    // Reset circle step: runs when the note timeline completely finishes
+    if (w <= 50 || h <= 50) {
+        w = 325;
+        h = 325;
+        
+        // If it shriveled up without being clicked, it's a natural miss
+        if (isCircleVisible) {
+            feedbackText = "Miss!";
+            console.log("Miss!");
+        }
+        
+        // Bring back visibility for the fresh oncoming note
+        isCircleVisible = true; 
+    }
+}
