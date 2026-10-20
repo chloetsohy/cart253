@@ -143,3 +143,22 @@ function drawGameOver() {
     text("Final Score: " + score, width / 2, height / 2); // getting score
 }
 
+
+
+// WHEN THE KEY IS PRESSSED FOR GAME STARTING, automatically triggers the function
+function keyPressed() {
+
+    // conditional for when space is pressed
+    if (gameState === "game" && key === " " && isCircleVisible) {
+        
+        // hiding circle for a clean look after the user presses space
+        isCircleVisible = false;
+
+        // triggering the glow amount and refers back to the drawGame function to create the glow effect
+        glowAmount = 25; 
+        
+        // distance using radius of the shrinking circle and the fixed target circle
+        let currentRadius = w / 2;
+        let targetRadius = 75; // 150 / 2
+    }
+}
