@@ -130,3 +130,16 @@ function drawGame() {
         isCircleVisible = true; 
     }
 }
+
+// GAME OVER
+// displays the game over message
+function drawGameOver() {
+    fill(255);
+    noStroke();
+    textSize(32);
+    textAlign(CENTER, CENTER);
+    text("Game Over!", width / 2, height / 2 - 50);
+    textSize(24);
+    text("Final Score: " + score, width / 2, height / 2); // getting score
+}
+
