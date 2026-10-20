@@ -160,5 +160,35 @@ function keyPressed() {
         // distance using radius of the shrinking circle and the fixed target circle
         let currentRadius = w / 2;
         let targetRadius = 75; // 150 / 2
+
+
+        // 50 POINTS FOR PERFECT (within 4 pixels of accuracy)
+        if (currentRadius >= targetRadius - 4 && currentRadius <= targetRadius + 4) {
+            score += 50;
+            feedbackText = "Perfect!";
+            console.log("Perfect!");
+        } 
+
+        // 25 POINTS FOR GOOD
+        else if ((currentRadius >= targetRadius - 15 && currentRadius < targetRadius - 4) || 
+                 (currentRadius > targetRadius + 4 && currentRadius <= targetRadius + 15)) {
+            score += 25;
+            feedbackText = "Good!";
+            console.log("Good!");
+        }
+
+        // 10 POINTS FOR OKAY
+        else if ((currentRadius >= targetRadius - 30 && currentRadius < targetRadius - 15) || 
+                 (currentRadius > targetRadius + 15 && currentRadius <= targetRadius + 30)) {
+            score += 10;
+            feedbackText = "Okay";
+            console.log("Okay");
+        }
+        
+        // OTHERWISE MISS
+        else {
+            feedbackText = "Miss!";
+            console.log("Miss!");
+        }
     }
 }
