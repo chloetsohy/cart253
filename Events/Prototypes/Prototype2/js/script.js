@@ -2,7 +2,7 @@
  * Rain your darkest secrets
  * Chloe Tso
  * 
- * This program asks users for an input of these darkest secrets, and then displays them as falling text on the screen. It uses state conditionals and manipulation of fallingText array to create the effect of each character falling down at different positions.
+ * This program asks users for an input of their secrets, and then displays them as falling text on the screen. It uses state conditionals and manipulation of fallingText array to create the effect of each character falling down at different positions.
  */
 
 "use strict";
@@ -18,7 +18,7 @@ function setup() {
 
     // input box for user to type their darkest secret
     inputText = createInput('');
-    inputText.attribute('placeholder', 'Type your darkest secret here...'); // the 'placeholder' text in the input box, disappears when user starts typing
+    inputText.attribute('placeholder', 'Type your secret here...'); // the 'placeholder' text in the input box, disappears when user starts typing
     inputText.size(500, 30); // size of the input box
     inputText.style('text-align', 'center');
     inputText.style('font-size', '20px');
