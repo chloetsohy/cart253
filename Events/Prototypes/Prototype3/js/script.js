@@ -2,8 +2,7 @@
  * Alphabet Proximity
  * Chloe Tso
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * This is a simple guessing game where the user has to guess a letter from the alphabet. The background colour changes based on the distance of the user's guess from the target letter. 
  */
 
 "use strict";
@@ -17,6 +16,8 @@ let recentDiff = null;
 let state = 'guessing';
 let bgColor; // variable to hold the background color
 
+
+// this setup function determines the initial state of the game and the randomed letter it generates
 function setup() {
     createCanvas(800, 800);
     textAlign(CENTER, CENTER);
@@ -32,6 +33,8 @@ function setup() {
         win();
 }
 
+
+// this draw function calls to update the user's guess and display the message. 
 function draw() {
     background(bgColor);
 
@@ -59,13 +62,19 @@ function guessing() {
 function win() {
 }
 
-function keyPressed() {
-    if ((keyCode >= 65 && keyCode <= 90) || (keyCode >= 97 && keyCode <= 122)) {
-        userGuess = key.toUpperCase();
-        let guessIndex = alphabet.indexOf(userGuess);
 
+// this function checks if the key pressed is a letter and compares it to the target letter. it will show that specific feedback message based on how close the guess is
+
+function keyPressed() {
+    if ((keyCode >= 65 && keyCode <= 90) || (keyCode >= 97 && keyCode <= 122)) { // this checks if the key pressed is a letter (A-Z or a-z)
+        userGuess = key.toUpperCase(); // changes to uppercase to match the target letter
+        let guessIndex = alphabet.indexOf(userGuess); // gets the index of the guessed letter in the alphabet
+
+        // get the diff
         let currentDifference = abs(targetIndex - guessIndex);
 
+
+        // conditional statements to determine the feedback messsage and background
         if (currentDifference === 0) {
             feedbackMessage = "Correct! The letter was " + targetLetter + "!";
             bgColor = color(144, 238, 144); // green for win
@@ -97,7 +106,7 @@ function keyPressed() {
             bgColor = color(200, 200, 200); // gray for far away
         }
 
-        
+        // update the recent difference
         recentDiff = currentDifference; 
     }
 }
