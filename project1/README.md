@@ -40,6 +40,14 @@ This website provides documentation of my prototyping work in CART 253. It featu
 | [View Pixel Art Game Online](https://chloetsohy.github.io/cart253/Conditionals/Prototypes/Prototype1/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Conditionals/Prototypes/Prototype1) | [View Colour Spins Online](https://chloetsohy.github.io/cart253/Conditionals/Prototypes/Prototype2/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Conditionals/Prototypes/Prototype2) | [View What's your luck Online](https://chloetsohy.github.io/cart253/Conditionals/Prototypes/Prototype3/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Conditionals/Prototypes/Prototype3) |
    
 
+## Events Prototypes
+
+| Rhythm Game | Falling Secrets | Alphabet Proximity |
+| :---: | :---: | :---: |
+| ![Prototype 1](images/events1.png) | ![Prototype 2](images/events2.jpg) | ![Prototype 3](images/events3.png) |
+| [View Rhythm Game Online](https://chloetsohy.github.io/cart253/Events/Prototypes/Prototype1/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Events/Prototypes/Prototype1) | [View Falling Secrets Online](https://chloetsohy.github.io/cart253/Events/Prototypes/Prototype2/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Events/Prototypes/Prototype2) | [View Alphabet Proximity Online](https://chloetsohy.github.io/cart253/Events/Prototypes/Prototype3/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Events/Prototypes/Prototype3) |
+
+
 ## My Personal Work Examples
 
 Here are some examples of my personal works! I particularly enjoy exploring different creative mediums!!
