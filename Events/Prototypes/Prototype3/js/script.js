@@ -41,4 +41,20 @@ function draw() {
 
     textSize(22);
     text("Your last guess: ", width/2, 350);
+
+    // Displays the actual key the user pressed
+    fill(0, 50, 150);
+    textSize(64);
+    text(userGuess, width/2, 420);
+
+    // Displays your conditional feedback messages
+    fill(25);
+    textSize(22);
+    text(feedbackMessage, width/2, 520);
+}
+
+function guessing() {
+}
+
+function win() {
 }
