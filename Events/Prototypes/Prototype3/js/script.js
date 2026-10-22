@@ -58,3 +58,46 @@ function guessing() {
 
 function win() {
 }
+
+function keyPressed() {
+    if ((keyCode >= 65 && keyCode <= 90) || (keyCode >= 97 && keyCode <= 122)) {
+        userGuess = key.toUpperCase();
+        let guessIndex = alphabet.indexOf(userGuess);
+
+        let currentDifference = abs(targetIndex - guessIndex);
+
+        if (currentDifference === 0) {
+            feedbackMessage = "Correct! The letter was " + targetLetter + "!";
+            bgColor = color(144, 238, 144); // green for win
+            state = 'win';
+        } 
+        // Checks if we have a previous guess to compare to
+        else if (recentDiff !== null && currentDifference > recentDiff) {
+            feedbackMessage = "Too Far!!";
+            bgColor = color(255, 182, 193); // light pink for colder
+        }
+        else if (currentDifference <= 1) {
+            feedbackMessage = "It's one of your neighbours!"; 
+            bgColor = color(255, 69, 0); // red orange for super close
+        }
+        else if (currentDifference <= 3) {
+            feedbackMessage = "You're quite close!"; 
+            bgColor = color(255, 140, 0); // dark orange
+        }
+        else if (currentDifference <= 5) {
+            feedbackMessage = "It's getting closer!"; 
+            bgColor = color(255, 215, 0); // yellow
+        }
+        else if (currentDifference <= 8) {
+            feedbackMessage = "You're getting there."; 
+            bgColor = color(173, 216, 230); // light blue
+        }
+        else {
+            feedbackMessage = "Not even close!";
+            bgColor = color(200, 200, 200); // gray for far away
+        }
+
+        
+        recentDiff = currentDifference; 
+    }
+}
