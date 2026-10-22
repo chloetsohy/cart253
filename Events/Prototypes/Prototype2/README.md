@@ -4,8 +4,8 @@ Chloe Tso
 
 ## Description
 
-This project showcases my prototype for variables. It explores loops and colours to create an interactive visual. The rectangles change colour overtime, and the cursor follows the colour after that to create a unique cursor pattern. 
-![Abstract image](prototype2_image.png)
+This project asks users for an input of their secrets, and as they hit 'enter', the letters are stored in an array that rains every individual letter.
+![Secret image](prototype2_image.png)
 
 ## Attribution
 
