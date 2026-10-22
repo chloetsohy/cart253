@@ -36,11 +36,15 @@ function draw() {
     }
 
     else if (state === "falling"){
-        for (let textObj of fallingText){
-            textObj.update();
-            textObj.display();
+            fill(255, 255, 255);
+            textSize(random(10, 30));
+            textAlign(CENTER, CENTER);
+
+            for(let obj of fallingText){
+                obj.y += obj.speed;
+                text(obj.character, obj.x, obj.y);
+            }
         }
-    }
 }
 
 
@@ -51,5 +55,20 @@ function keyPressed(){
     if (keyCode === ENTER && state === "entering"){
         state = "falling";
         fallingState();
+    }
+}
+
+function fallingState(){
+    // remove the input box
+    inputText.remove();
+
+    for (let character of inputText.value()){
+
+        fallingText.push({
+            character: character,
+            x: random(width),
+            y: random(-200, -20),
+            speed: random(1, 4)
+        });
     }
 }
