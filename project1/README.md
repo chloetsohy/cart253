@@ -44,7 +44,7 @@ This website provides documentation of my prototyping work in CART 253. It featu
 
 | Rhythm Game | Falling Secrets | Alphabet Proximity |
 | :---: | :---: | :---: |
-| ![Prototype 1](images/events1.png) | ![Prototype 2](images/events2.jpg) | ![Prototype 3](images/events3.png) |
+| ![Prototype 1](images/events1.png) | ![Prototype 2](images/events2.png) | ![Prototype 3](images/events3.png) |
 | [View Rhythm Game Online](https://chloetsohy.github.io/cart253/Events/Prototypes/Prototype1/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Events/Prototypes/Prototype1) | [View Falling Secrets Online](https://chloetsohy.github.io/cart253/Events/Prototypes/Prototype2/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Events/Prototypes/Prototype2) | [View Alphabet Proximity Online](https://chloetsohy.github.io/cart253/Events/Prototypes/Prototype3/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Events/Prototypes/Prototype3) |
 
 
