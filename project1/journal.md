@@ -43,3 +43,13 @@ What surprised me the most was how easy and simple manipulating if statements wa
 As I quite enjoyed these prototypes, I hope to utilize more of what I learnt this lesson on conditionals, and include it in all my future works. One example is below, where I hope to change the text's texture based on the cursor movements.
 
 ![Conditionals example](images/conditionals-example.gif)
+
+
+## 21/10/2026 - Prototyping events
+In this prototype challenge, I learnt a lot about setting up different screens using state changes. One thing that surprised me was important variables are in allowing user interaction. This was proven through my input requirements from the users, where I had to utilize the manipulation of inputs and turn it into array characters. One particular components I found extremely cool was how each event screen can change a completely different variable, such as the randomized glitchy letters in my prototype 2. 
+
+One particularly difficult thing to implemenet was the falling lettters in my falling secrets prototype. As I wanted to loop through each letter within the input, I initially thought I simply had to use charAt(). However, this method did not allow me to seperate each indivudal letter in a simple way that allows it to be pushed easily, therefore I ultimately switched to using a collection of array. This method endeed up providing me an opportunity to easily loop through each array index, and push each letter accordingly. 
+
+Through this project, I hope to further discover more complex manipulation of interactive media, such as using ASCII or possibly 3D models of specific letters/characters. One thing I hope readers will get out of my work is how sometimes a simple block of code can manipulate a huge chunk of the project, such as just changing a variable value. Below is an image of what I would like to explore next in my artworks. 
+
+![Events example](images/events_example.gif)
