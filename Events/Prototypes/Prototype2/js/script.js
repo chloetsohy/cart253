@@ -23,8 +23,14 @@ function setup() {
     inputText.style('text-align', 'center');
     inputText.style('font-size', '20px');
     inputText.style('font-family', 'Arial');
-    inputText.position((width - 500) / 2, 700);
+    inputText.center();
 
+}
+
+function windowResized() {
+    if (state === "entering") {
+        inputText.center();
+    }
 }
 
 
