@@ -6,6 +6,7 @@
  */
 
 let ball1 = undefined; // Will create it with createBall()
+let balls =[];
 
 /**
  * Create the canvas and the ball
