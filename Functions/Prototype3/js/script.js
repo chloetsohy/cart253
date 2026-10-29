@@ -52,6 +52,7 @@ function setup() {
 */
 function draw() {
   background(33, 37, 43);
+  cursor(ARROW);
 
   // depeleting stats over time in 15 frame intervals
   if (frameCount % 15 === 0) {
@@ -68,12 +69,54 @@ function draw() {
 
   // passing the images and stats as parameters to drawPetRow
   imageMode(CENTER);
-  drawPetRow(hungerImgs, pet.hunger, "Hunger: ", 300, color(235, 0, 125));
-  drawPetRow(happinessImgs, pet.happiness, "Happiness: ", 360, color(255, 252, 150));
-  drawPetRow(sleepImgs, pet.energy, "Energy: ", 420, color(122, 191, 255));
+  drawPetRow(hungerImgs, pet.hunger, "Hunger: ", 200, 300, color(235, 0, 125));
+  drawPetRow(happinessImgs, pet.happiness, "Happiness: ", 200, 360, color(255, 252, 150));
+  drawPetRow(sleepImgs, pet.energy, "Energy: ", 200, 420, color(122, 191, 255));
 
-  // Update button choices cleanly via parameters
-  pet.hunger = drawButton("Feed", pet.hunger, 20);
-  pet.happiness = drawButton("Play", pet.happiness, 20);
-  pet.energy = drawButton("Sleep", pet.energy, 30);
+
+  // ACTION BBUTTONS
+  pet.hunger = drawButton(200, 560, 110, 45, "Feed", pet.hunger, 20);
+  pet.happiness = drawButton(345, 560, 110, 45, "Play", pet.happiness, 20);
+  pet.energy = drawButton(490, 560, 110, 45, "Sleep", pet.energy, 30);
+}
+
+
+function drawPetRow(imgs, stat, label, x, y, barColor) {
+  let index = 0;
+
+  // Determining which image to show when the stat is above 70, between 30 and 70, or below 30
+  if (stat > 70) {
+    index = 0;
+  }
+
+  else if (stat > 30) {
+    index = 1;
+  }
+
+  else {
+    index = 2;
+  }
+
+  // render the image
+  image(imgs[index], x-8, y+14, 55, 55);
+
+  // BAR TEXT
+  push();
+  textAlign(LEFT, CENTER);
+  textSize(18);
+  fill(240, 240, 245);
+  text(label + floor(stat) + "%", x + 50, y + 14);
+
+  // bar background container
+  stroke(20);
+  strokeWeight(2);
+  fill(50, 50, 50);
+  rect(x + 205, y, 250, 28, 5);
+
+  noStroke();
+  fill(barColor);
+
+  let barWidth = map(stat, 0, 100, 0, BAR_MAXWIDTH);
+  rect(x + 205, y, barWidth, BAR_MAXHEIGHT, 5);
+  pop();
 }
