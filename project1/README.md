@@ -48,6 +48,14 @@ This website provides documentation of my prototyping work in CART 253. It featu
 | [View Rhythm Game Online](https://chloetsohy.github.io/cart253/Events/Prototypes/Prototype1/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Events/Prototypes/Prototype1) | [View Falling Secrets Online](https://chloetsohy.github.io/cart253/Events/Prototypes/Prototype2/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Events/Prototypes/Prototype2) | [View Alphabet Proximity Online](https://chloetsohy.github.io/cart253/Events/Prototypes/Prototype3/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Events/Prototypes/Prototype3) |
 
 
+## Functions Prototypes
+
+| Paint Simulator | RGB Mixer | Tomodachi |
+| :---: | :---: | :---: |
+| ![Prototype 1](images/functions1.png) | ![Prototype 2](images/functions2.png) | ![Prototype 3](images/functions3.png) |
+| [View Rhythm Game Online](https://chloetsohy.github.io/cart253/Functions/Prototypes/Prototype1/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Functions/Prototypes/Prototype1) | [View Falling Secrets Online](https://chloetsohy.github.io/cart253/Functions/Prototypes/Prototype2/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Functions/Prototypes/Prototype2) | [View Alphabet Proximity Online](https://chloetsohy.github.io/cart253/Functions/Prototypes/Prototype3/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Functions/Prototypes/Prototype3) |
+
+
 ## My Personal Work Examples
 
 Here are some examples of my personal works! I particularly enjoy exploring different creative mediums!!
