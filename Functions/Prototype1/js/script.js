@@ -27,23 +27,23 @@ function brushProperties(speed) {
 let speedLimit = constrain(speed, 0, 100);
 
 // thickness for 0 movement is 50px, for 100 movement is 2px.
-let thickness = map(speedLimit, 0, 100, 50, 2);
+let thicknessInitialize = map(speedLimit, 0, 100, 25, 2);
 
 // slow = full opacity, faster= faint transparency
-let transparency = map(speedLimit, 0, 100, 255, 40);
+let transparencyInitialize = map(speedLimit, 0, 100, 255, 40);
 
 return {
-  thickness1: thickness, 
-  transparency1: transparency};
+  thickness: thicknessInitialize, 
+  transparency: transparencyInitialize};
 }
 
 
-function drawStroke(x1, y1, x2, y2, strokeSize, transparency) {
+function drawStroke(x1, y1, x2, y2, brushStyle, strokeSize, transparency) {
   push();
 
   stroke(12, 61, 23, transparency);
   strokeWeight(strokeSize);
-  strokeCap(ROUND);
+  strokeCap(SQUARE);
   
   line(x1, y1, x2, y2);
 
