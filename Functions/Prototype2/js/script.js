@@ -7,9 +7,9 @@
 
 
 let currentRGB = {
-    r: 255,
-    g: 255,
-    b: 255
+    r: 25,
+    g: 25,
+    b: 25
 };
 
 
@@ -95,9 +95,15 @@ function drawButton(x, y, label, channelValue, amount) {
 }
 
 
-
+// calculate overall brightness of the background colour and return either black or white for the text colour
 function getChannelColor(r, g, b) {
-
+  let brightness = (r+g+b)/3; // average of the three channels
+  
+  if (brightness > 125) {
+    return color(0);
+  } else {
+    return color(255);
+  }
 }
 
 
