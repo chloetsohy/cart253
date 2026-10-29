@@ -32,18 +32,20 @@ let thickness = map(speedLimit, 0, 100, 50, 2);
 // slow = full opacity, faster= faint transparency
 let transparency = map(speedLimit, 0, 100, 255, 40);
 
-return thickness, transparency;
+return {
+  thickness1: thickness, 
+  transparency1: transparency};
 }
 
 
-function drawStroke(x1, x2, y1, y2, thickness, transparency) {
+function drawStroke(x1, y1, x2, y2, strokeSize, transparency) {
   push();
 
   stroke(12, 61, 23, transparency);
-  strokeWeight(thickness);
+  strokeWeight(strokeSize);
   strokeCap(ROUND);
   
-  line(x1, x2, y1, y2);
+  line(x1, y1, x2, y2);
 
   pop();
 
