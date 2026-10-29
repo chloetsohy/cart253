@@ -5,7 +5,7 @@
 
 "use strict";
 
-
+// initial rgb values
 let currentRGB = {
     r: 25,
     g: 25,
@@ -13,78 +13,89 @@ let currentRGB = {
 };
 
 
+// declaring varianbles
 const BUTTON_WIDTH = 80;
 const BUTTON_HEIGHT = 60;
 const ROW_GAP = 80;
 const COL_GAP = 150;
 
+
 /**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
+ * Sets up the canvas size
 */
 function setup() {
-createCanvas(700,700);
+    createCanvas(700,700);
 }
 
 
 /**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
+ * Draws the background and the buttons for adjusting RGB values
 */
 function draw() {
-background(currentRGB.r, currentRGB.g, currentRGB.b);
+    background(currentRGB.r, currentRGB.g, currentRGB.b);
 
-textAlign(CENTER, CENTER);
-textSize(30);
-
-let centerX = width / 2;
-
-let colRedX = centerX - COL_GAP;
-let colGreenX = centerX;
-let colBlueX = centerX + COL_GAP;
+    textAlign(CENTER, CENTER);
+    textSize(30);
 
 
-let topRowY = height / 2 - ROW_GAP;
-let labelRowY = height / 2;
-let bottomRowY = height / 2 + ROW_GAP;
+    //ALIGNING BUTTONS AND TEXT
+    let centerX = width / 2;
+    
+    let colRedX = centerX - COL_GAP;
+    let colGreenX = centerX;
+    let colBlueX = centerX + COL_GAP;
 
-fill(getChannelColor(currentRGB.r, currentRGB.g, currentRGB.b));
 
-text("R\n" + currentRGB.r, colRedX, labelRowY);
-text("G\n" + currentRGB.g, colGreenX, labelRowY);
-text("B\n" + currentRGB.b, colBlueX, labelRowY);
+    let topRowY = height / 2 - ROW_GAP;
+    let labelRowY = height / 2;
+    let bottomRowY = height / 2 + ROW_GAP;
 
-currentRGB.r = drawButton(colRedX - BUTTON_WIDTH / 2, topRowY - BUTTON_HEIGHT / 2, "+", currentRGB.r, 15);
-currentRGB.g = drawButton(colGreenX - BUTTON_WIDTH / 2, topRowY - BUTTON_HEIGHT / 2, "+", currentRGB.g, 15);
-currentRGB.b = drawButton(colBlueX - BUTTON_WIDTH / 2, topRowY - BUTTON_HEIGHT / 2, "+", currentRGB.b, 15);
+    // changing the text colour based on the background colour for better visibility
+    fill(getChannelColor(currentRGB.r, currentRGB.g, currentRGB.b));
 
-currentRGB.r = drawButton(colRedX - BUTTON_WIDTH / 2, bottomRowY - BUTTON_HEIGHT / 2, "-", currentRGB.r, -15);
-currentRGB.g = drawButton(colGreenX - BUTTON_WIDTH / 2, bottomRowY - BUTTON_HEIGHT / 2, "-", currentRGB.g, -15);
-currentRGB.b = drawButton(colBlueX - BUTTON_WIDTH / 2, bottomRowY - BUTTON_HEIGHT / 2, "-", currentRGB.b, -15);
+    text("R\n" + currentRGB.r, colRedX, labelRowY);
+    text("G\n" + currentRGB.g, colGreenX, labelRowY);
+    text("B\n" + currentRGB.b, colBlueX, labelRowY);
+
+    // drawing the buttons and updating the RGB values based on user interaction
+    currentRGB.r = drawButton(colRedX - BUTTON_WIDTH / 2, topRowY - BUTTON_HEIGHT / 2, "+", currentRGB.r, 15);
+    currentRGB.g = drawButton(colGreenX - BUTTON_WIDTH / 2, topRowY - BUTTON_HEIGHT / 2, "+", currentRGB.g, 15);
+    currentRGB.b = drawButton(colBlueX - BUTTON_WIDTH / 2, topRowY - BUTTON_HEIGHT / 2, "+", currentRGB.b, 15);
+
+    currentRGB.r = drawButton(colRedX - BUTTON_WIDTH / 2, bottomRowY - BUTTON_HEIGHT / 2, "-", currentRGB.r, -15);
+    currentRGB.g = drawButton(colGreenX - BUTTON_WIDTH / 2, bottomRowY - BUTTON_HEIGHT / 2, "-", currentRGB.g, -15);
+    currentRGB.b = drawButton(colBlueX - BUTTON_WIDTH / 2, bottomRowY - BUTTON_HEIGHT / 2, "-", currentRGB.b, -15);
 }
 
 
-
+// Draws the button and handles user interaction. Returns the new channel value after user interaction.
 function drawButton(x, y, label, channelValue, amount) {
   let newValue = channelValue;
   
   push();
+
+  // check if mouse is hovering over button
   if (mouseX >= x && mouseX <= x + BUTTON_WIDTH && mouseY >= y && mouseY <= y + BUTTON_HEIGHT) {
-    fill(240);
-    cursor(HAND);
+    fill(240); // slightly darker fill for hover
+    cursor(HAND); // update to hand cursor
     
+    // check if user is clicking
     if (mouseIsPressed) {
       fill(180);
       newValue += amount;
-      newValue = constrain(newValue, 0, 255);
+      newValue = constrain(newValue, 0, 255); // constrain the value to be between 0 and 255
       mouseIsPressed = false;
     }
   } else {
     fill(255);
   }
 
+  // button structure
   stroke(0);
   strokeWeight(2);
   rect(x, y, BUTTON_WIDTH, BUTTON_HEIGHT, 5);
 
+  // button symbol
   noStroke();
   fill(0);
   textSize(20);
