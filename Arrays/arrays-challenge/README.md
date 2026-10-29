@@ -1,4 +1,4 @@
-# TITLE OF PROJECT
+# Moving balls
 
 AUTHOR NAME
 
@@ -6,7 +6,7 @@ AUTHOR NAME
 
 ## Description
 
-This description should help the reader understand what the program is, anything they should know to be able to experience it (controls, special features, etc.), and what the desired user experience is. For example:
+This project creates and displays moving balls once users click on a spot on the canvas. It uses arrays to store all the balls created.
 
 ## Attribution
 
