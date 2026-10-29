@@ -26,7 +26,7 @@ function createBall() {
   // Create a ball object with appropriate properties
   const newBall = {
     // Position and dimensions
-    x: mouseX,
+    x: mouseX, // changed to mouseX and mouseY to create ball at mouse position
     y: mouseY,
     size: 20,
     // Colour
@@ -50,7 +50,7 @@ function draw() {
   bounceBall(ball1);
   drawBall(ball1);
 
-
+// Move and draw all the balls in the array
   for (let i = 0; i < balls.length; i++) {
     moveBall(balls[i]);
     bounceBall(balls[i]);
@@ -97,7 +97,7 @@ function drawBall(ball) {
   pop();
 }
 
-
+// calls when mouse is pressed to create a new ball
 function mousePressed() {
     tempBall = createBall();
     balls.push(tempBall);
