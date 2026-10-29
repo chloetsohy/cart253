@@ -16,6 +16,7 @@ function setup() {
   createCanvas(400, 400);
   // Create the ball
   ball1 = createBall();
+
 }
 
 /**
@@ -49,11 +50,13 @@ function draw() {
   bounceBall(ball1);
   drawBall(ball1);
 
+
   for (let i = 0; i < balls.length; i++) {
     moveBall(balls[i]);
     bounceBall(balls[i]);
     drawBall(balls[i]);
   }
+
 }
 
 /**
@@ -92,4 +95,11 @@ function drawBall(ball) {
   fill(ball.fill);
   ellipse(ball.x, ball.y, ball.size);
   pop();
+}
+
+
+function mousePressed() {
+    tempBall = createBall();
+    balls.push(tempBall);
+
 }
