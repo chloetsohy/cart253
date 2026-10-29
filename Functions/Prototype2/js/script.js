@@ -1,21 +1,19 @@
 /**
- * Title of Project
- * Author Name
- * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * RGB Colour Mixer
+ * This program allows the user to mix RGB colours using buttons. It displays the current colour in the background and shows the RGB values on the screen.
  */
 
 "use strict";
 
 
 let currentRGB = {
-    r: 0,
-    g: 0,
-    b: 0
+    r: 255,
+    g: 255,
+    b: 255
 };
 
-const BUTTON_WIDTH = 80
+
+const BUTTON_WIDTH = 80;
 const BUTTON_HEIGHT = 60;
 const ROW_GAP = 80;
 const COL_GAP = 150;
@@ -48,4 +46,18 @@ let topRowY = height / 2 - ROW_GAP;
 let labelRowY = height / 2;
 let bottomRowY = height / 2 + ROW_GAP;
 
+fill(getChannelColor(currentRGB.r, currentRGB.g, currentRGB.b));
+
+text("R\n" + currentRGB.r, colRedX, labelRowY);
+text("G\n" + currentRGB.g, colGreenX, labelRowY);
+text("B\n" + currentRGB.b, colBlueX, labelRowY);
+
+currentRGB.r = drawButton(colRedX - BUTTON_WIDTH / 2, topRowY - BUTTON_HEIGHT / 2, "+", currentRGB.r, 15);
+currentRGB.g = drawButton(colGreenX - BUTTON_WIDTH / 2, topRowY - BUTTON_HEIGHT / 2, "+", currentRGB.g, 15);
+currentRGB.b = drawButton(colBlueX - BUTTON_WIDTH / 2, topRowY - BUTTON_HEIGHT / 2, "+", currentRGB.b, 15);
+
+currentRGB.r = drawButton(colRedX - BUTTON_WIDTH / 2, bottomRowY - BUTTON_HEIGHT / 2, "-", currentRGB.r, -15);
+currentRGB.g = drawButton(colGreenX - BUTTON_WIDTH / 2, bottomRowY - BUTTON_HEIGHT / 2, "-", currentRGB.g, -15);
+currentRGB.b = drawButton(colBlueX - BUTTON_WIDTH / 2, bottomRowY - BUTTON_HEIGHT / 2, "-", currentRGB.b, -15);
 }
+
