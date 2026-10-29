@@ -5,21 +5,44 @@
 
 "use strict";
 
+
+let currentColour;
+let paletteColours = [];
+const BOX_SIZE = 50;
+const PALETTE_Y = 630;
+
 function setup() {
 createCanvas(700, 700);
 background('beige');
 
+  paletteColours = [
+    color('black'),
+    color(168, 30, 20),   
+    color(232, 108, 0),  
+    color(247, 236, 17),  
+    color(10, 125, 31), 
+    color(11, 123, 222), 
+    color(97, 21, 179), 
+    color(255, 18, 227)
+  ];
+
+  currentColour = paletteColours[0];
 } 
 
 function draw() {
 
+  drawPaletteUI();
+
   if (mouseIsPressed) {
+    if (mouseY< PALETTE_Y) {
     let mouseSpeed = dist(mouseX, mouseY, pmouseX, pmouseY);
     let brushStyle = brushProperties(mouseSpeed)
 
-    drawStroke(mouseX, mouseY, pmouseX, pmouseY, brushStyle, brushStyle.thickness, brushStyle.transparency);
+    drawStroke(mouseX, mouseY, pmouseX, pmouseY, currentColour, brushStyle, brushStyle.thickness, brushStyle.transparency);
   }
 }
+}
+
 
 function brushProperties(speed) {
 
@@ -38,15 +61,17 @@ return {
 }
 
 
-function drawStroke(x1, y1, x2, y2, brushStyle, strokeSize, transparency) {
+function drawStroke(x1, y1, x2, y2, currentColour, brushStyle, strokeSize, transparency) {
   push();
 
-  stroke(12, 61, 23, transparency);
+  stroke(red(currentColour), green(currentColour), blue(currentColour), transparency);
   strokeWeight(strokeSize);
-  strokeCap(SQUARE);
+  strokeCap(PROJECT);
   
   line(x1, y1, x2, y2);
 
   pop();
 
 }
+
+
