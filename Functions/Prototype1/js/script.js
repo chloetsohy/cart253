@@ -1,13 +1,5 @@
 /**
- * Rain your darkest secrets (Refactored for Functions Challenge)
- * Chloe Tso (Modified)
- * 
- * This program asks users for an input of their secrets, and then displays them as falling text on the screen. 
- * 
- * Challenge Compliance:
- * 1. Functions with parameters: updateCharacterPhysics() and drawCharacter()
- * 2. Functions with return values: createSecretData()
- * 3. Refactoring: Extracted processing and rendering out of the draw loop into modular clean functions.
+ * The paintbrush engine
  */
 
 
