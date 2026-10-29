@@ -51,7 +51,7 @@ function setup() {
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
-  background(33, 37, 43);
+  background(36, 45, 82);
   cursor(ARROW);
 
   // depeleting stats over time in 15 frame intervals
@@ -110,7 +110,7 @@ function drawPetRow(imgs, stat, label, x, y, barColor) {
   // bar background container
   stroke(20);
   strokeWeight(2);
-  fill(50, 50, 50);
+  fill(24, 31, 59);
   rect(x + 205, y, 250, 28, 5);
 
   noStroke();
@@ -120,3 +120,49 @@ function drawPetRow(imgs, stat, label, x, y, barColor) {
   rect(x + 205, y, barWidth, BAR_MAXHEIGHT, 5);
   pop();
 }
+
+
+
+function drawButton(x, y, w, h, label, stat, increaseAmount) {
+  push();
+
+  // check if mouse is hovering over button
+  let isHovered = mouseX > x && 
+                  mouseX < x + w && 
+                  mouseY > y && 
+                  mouseY < y + h;
+
+  if (isHovered) {
+    cursor(HAND);
+      
+    if (mouseIsPressed) {
+      fill(58, 64, 75);
+      stat = min(100, stat + increaseAmount);
+      mouseIsPressed = false; // prevent continuous increase while holding down the mouse
+    }
+    else {
+      fill(74, 82, 96);
+    }
+  }
+
+
+    else {
+      // button is not hovered
+      fill(24, 31, 59);
+    }
+
+
+  stroke(20);
+  strokeWeight(2);
+  rect(x, y, w, h, 8);
+
+  noStroke();
+  fill(240, 240, 245);
+  textSize(16);
+  textAlign(CENTER, CENTER);
+  text(label, x + w / 2, y + h / 2);
+  
+  pop();
+
+  return stat;
+  }
