@@ -75,3 +75,41 @@ function drawStroke(x1, y1, x2, y2, currentColour, brushStyle, strokeSize, trans
 }
 
 
+function drawPaletteUI () {
+  push();
+  noStroke();
+
+
+  for(let i = 0; i < paletteColours.length; i++) { // looping through the array index for the colours
+
+    // spacing the boxes
+    let xOffset = 90 + (i * (BOX_SIZE+15));
+
+    // grab colour at position i and render the square
+    fill(paletteColours[i]);
+    rect(xOffset, PALETTE_Y, BOX_SIZE, BOX_SIZE);
+
+  }
+
+  pop();
+}
+
+
+
+function mousePressed() {
+
+  // check if user presses within the vertical height of the boxes
+  if (mouseY >= PALETTE_Y && mouseY <= PALETTE_Y + BOX_SIZE) {
+
+    for (let i = 0; i < paletteColours.length; i++) {
+
+      // check if user presses within the horizontal position in square
+      let xOffset = 90 + (i * (BOX_SIZE + 15));
+
+      // updating to match palette colour
+      if (mouseX >= xOffset && mouseX <= xOffset + BOX_SIZE) {
+        currentColour = paletteColours[i]; 
+      }
+    }
+  }
+}
