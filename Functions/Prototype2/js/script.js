@@ -61,3 +61,24 @@ currentRGB.g = drawButton(colGreenX - BUTTON_WIDTH / 2, bottomRowY - BUTTON_HEIG
 currentRGB.b = drawButton(colBlueX - BUTTON_WIDTH / 2, bottomRowY - BUTTON_HEIGHT / 2, "-", currentRGB.b, -15);
 }
 
+
+
+function drawButton(x, y, label, channelValue, amount) {
+  let newValue = channelValue;
+  
+  push();
+  if (mouseX >= x && mouseX <= x + BUTTON_WIDTH && mouseY >= y && mouseY <= y + BUTTON_HEIGHT) {
+    fill(240);
+    cursor(HAND);
+    
+    if (mouseIsPressed) {
+      fill(180);
+      newValue += amount;
+      newValue = constrain(newValue, 0, 255);
+      mouseIsPressed = false;
+    }
+  } else {
+    fill(255);
+  }
+  pop();
+}
