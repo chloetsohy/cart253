@@ -53,3 +53,20 @@ One particularly difficult thing to implemenet was the falling lettters in my fa
 Through this project, I hope to further discover more complex manipulation of interactive media, such as using ASCII or possibly 3D models of specific letters/characters. One thing I hope readers will get out of my work is how sometimes a simple block of code can manipulate a huge chunk of the project, such as just changing a variable value. Below is an image of what I would like to explore next in my artworks. 
 
 ![Events example](images/events_example.gif)
+
+
+
+## 29/10/2026 - Prototyping functions
+Through this prototyping project focusing on functions, I learned how to create highly reusable blocks of instructions. This allowed me to clean up my canvas setup and map out certain complex components without repeating the same line over and over.
+
+What surprised me most was how parameters instantly scale up iterations within each project. For example, instead of creating and repeating my draw function for the tomodachi status bars, simply passing the parameters to that specific function generated an entire gallery of custom functions that worked with minimal lines of code. 
+
+The coolest part of this challenge was seeing how implementing parameters allowed my workspace to feel cleaner and less cluttered. Being able to bundle certain rules, geometric shapes, or even text, it not only enhanced readability, but also permitted me to make some unique approaches and ideas as I used to dislike the concept of repetition of codes.
+
+Though, one difficulty I faced was grasping the concept of parameters. For instance, both my RGB mixer and tomodachi had quite some parameter variables, and it would sometimes get confusing as I mixed up certain variables up. This created some problems: int couldn't turn into floats, and ended up breaking my code. It was also confusing at first to understnad how data would be processed and passed back to the main system using 'return'. Luckily, I was able to clearly map out how the overall structure worked in the end. 
+
+I hope that others looking at my work will understand that parameters are able to simplify and organize a programmer's workspace, and how using reusable blueprints can help build a clean structural layout of a code file.
+
+I am eager to develop these types of work further by combining custon functions with external data sets, espesically exploring how imported data can dynamically alter visual interfaces and layouts in a program. One example is using images to create repetitions.
+
+![Functions example](images/functions_example.jpg)
