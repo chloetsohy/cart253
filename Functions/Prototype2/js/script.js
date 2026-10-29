@@ -80,5 +80,24 @@ function drawButton(x, y, label, channelValue, amount) {
   } else {
     fill(255);
   }
+
+  stroke(0);
+  strokeWeight(2);
+  rect(x, y, BUTTON_WIDTH, BUTTON_HEIGHT, 5);
+
+  noStroke();
+  fill(0);
+  textSize(20);
+  text(label, x + BUTTON_WIDTH / 2, y + BUTTON_HEIGHT / 2);
   pop();
+
+  return newValue;
 }
+
+
+
+function getChannelColor(r, g, b) {
+
+}
+
+
