@@ -48,6 +48,12 @@ function draw() {
   moveBall(ball1);
   bounceBall(ball1);
   drawBall(ball1);
+
+  for (let i = 0; i < balls.length; i++) {
+    moveBall(balls[i]);
+    bounceBall(balls[i]);
+    drawBall(balls[i]);
+  }
 }
 
 /**
@@ -69,11 +75,11 @@ function bounceBall(ball) {
   
   // Handle bouncing horizontally
   if (bounceX) {
-    ball1.velocity.x *= -1;
+    ball.velocity.x *= -1;
   }
   // Handle bouncing vertically
   if (bounceY) {
-    ball1.velocity.y *= -1;
+    ball.velocity.y *= -1;
   }
 }
 
