@@ -1,19 +1,24 @@
 /**
  * The paintbrush engine
+ * This program is a paintbrush simulation that includes a colour palette. When users slowly draw on the canvas, the stroke is thick and bold, but as users move the mouse around at a faster speed, the stroke slowly changes into a more opaque and thin appearance.
  */
 
 
 "use strict";
 
 
+// variable declarations
 let currentColour;
 let paletteColours = [];
 const BOX_SIZE = 50;
 const PALETTE_Y = 630;
 
+
+// SETUP FUNCTION, it defines the canvas size, background colour and the palette colours that will be displayed using array indexing
+
 function setup() {
 createCanvas(700, 700);
-background('beige');
+background(255, 254, 237);
 
   paletteColours = [
     color('black'),
@@ -29,12 +34,18 @@ background('beige');
   currentColour = paletteColours[0];
 } 
 
+
+// DRAW FUNCTION
+// it first draws the UI of the palette to ensure it shows up on the user's screen
 function draw() {
 
   drawPaletteUI();
 
+  // when the user starts drawing, it calls drawStroke and system draws based on the parameters that will be detailed below.
   if (mouseIsPressed) {
     if (mouseY< PALETTE_Y) {
+      
+    // speed determined by the distance of current mouse position and previous position
     let mouseSpeed = dist(mouseX, mouseY, pmouseX, pmouseY);
     let brushStyle = brushProperties(mouseSpeed)
 
@@ -44,6 +55,8 @@ function draw() {
 }
 
 
+
+// by inputting the speed variable in the parameter, it tracks the current mouseSpeed to determine what the thickness and transparency it should be
 function brushProperties(speed) {
 
   // speed range
@@ -56,15 +69,22 @@ let thicknessInitialize = map(speedLimit, 0, 100, 25, 2);
 let transparencyInitialize = map(speedLimit, 0, 100, 255, 40);
 
 return {
+  // put into a container as an object
   thickness: thicknessInitialize, 
   transparency: transparencyInitialize};
 }
 
 
+
+
+// DRAW STROKE function defines how the stroke looks like. It takes the individual RGB values, along with the transparency for the colour/opacity. 
+
+// it then states the stroke weight and cap, and draws the line based on these variables. 
 function drawStroke(x1, y1, x2, y2, currentColour, brushStyle, strokeSize, transparency) {
   push();
 
   stroke(red(currentColour), green(currentColour), blue(currentColour), transparency);
+
   strokeWeight(strokeSize);
   strokeCap(PROJECT);
   
@@ -75,6 +95,7 @@ function drawStroke(x1, y1, x2, y2, currentColour, brushStyle, strokeSize, trans
 }
 
 
+//draws the interface for the colour palette
 function drawPaletteUI () {
   push();
   noStroke();
@@ -96,6 +117,7 @@ function drawPaletteUI () {
 
 
 
+// determining whether the user's click is within the palette boxes bounds
 function mousePressed() {
 
   // check if user presses within the vertical height of the boxes
