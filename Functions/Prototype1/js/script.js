@@ -36,4 +36,15 @@ return thickness, transparency;
 }
 
 
-function drawStroke
+function drawStroke(x1, x2, y1, y2, thickness, transparency) {
+  push();
+
+  stroke(12, 61, 23, transparency);
+  strokeWeight(thickness);
+  strokeCap(ROUND);
+  
+  line(x1, x2, y1, y2);
+
+  pop();
+
+}
