@@ -39,13 +39,13 @@ function setup() {
 }
 
 function draw() {
-    background('seagreen');
+    background('#1E272C');
     const elapsed = millis(); // time since the animation started
 
     // loop through each row and draw the word with the correct spread progress
     for (let row = 0; row < ROW_COUNT; row++) {
         const rowStart = row * ROW_DELAY;
-        const timeSinceStart = elapsed - rowStart;
+        const timeSinceStart = (elapsed - rowStart) * SPEED[row];
 
         let rowProgress;
         if (timeSinceStart < 0) {
@@ -54,8 +54,11 @@ function draw() {
             rowProgress = getSpreadProgress(timeSinceStart % LOOP_TIME);
         }
 
+
+        const currentWord = WORDS[row];
+        const currentColour = COLOURS[row];
         // conditional to ensure that the rowProgress is 0 if the row hasn't started yet
-        drawWord(rowHeight * (row + 1), rowProgress);
+        drawWord(rowHeight * (row + 1), rowProgress, currentWord, currentColour);
     }
 }
 
@@ -75,7 +78,7 @@ function getSpreadProgress(rowElapsed) {
     return 0;
 }
 
-function drawWord(y, spreadProgress) {
+function drawWord(y, spreadProgress, word, colour) {
     const letterWidths = [];
     let wordWidth = 0;
 
