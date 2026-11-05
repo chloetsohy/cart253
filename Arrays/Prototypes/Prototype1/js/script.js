@@ -82,14 +82,14 @@ function drawWord(y, spreadProgress, wordToDraw, wordColour) {
     const letterWidths = [];
     let wordWidth = 0;
 
-    for (let letter of wordTodDraw) {
+    for (let letter of wordToDraw) {
         const letterWidth = textWidth(letter);
         letterWidths.push(letterWidth);
         wordWidth += letterWidth;
     }
 
     let x = width / 2 - wordWidth / 2;
-    for (let index = 0; index < wordTodDraw.length; index++) {
+    for (let index = 0; index < wordToDraw.length; index++) {
         const compactX = x + letterWidths[index] / 2;
         const spreadX = map(index, 0, wordToDraw.length - 1, SIDE_PADDING, width - SIDE_PADDING);
         const letterX = lerp(compactX, spreadX, spreadProgress);
