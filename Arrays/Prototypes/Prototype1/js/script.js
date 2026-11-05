@@ -3,6 +3,7 @@
  * Chloe Tso
  *
  * Ten rows of text open from the center, hold, and close in sequence.
+ * CHANGED FROM VARIABLES PROTOTYPE 1: Now uses arrays to store words, colours, and speed multipliers for each row.
  */
 
 "use strict";
