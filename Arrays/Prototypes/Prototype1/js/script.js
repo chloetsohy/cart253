@@ -78,24 +78,24 @@ function getSpreadProgress(rowElapsed) {
     return 0;
 }
 
-function drawWord(y, spreadProgress, word, colour) {
+function drawWord(y, spreadProgress, wordToDraw, wordColour) {
     const letterWidths = [];
     let wordWidth = 0;
 
-    for (let letter of WORD) {
+    for (let letter of wordTodDraw) {
         const letterWidth = textWidth(letter);
         letterWidths.push(letterWidth);
         wordWidth += letterWidth;
     }
 
     let x = width / 2 - wordWidth / 2;
-    for (let index = 0; index < WORD.length; index++) {
+    for (let index = 0; index < wordTodDraw.length; index++) {
         const compactX = x + letterWidths[index] / 2;
-        const spreadX = map(index, 0, WORD.length - 1, SIDE_PADDING, width - SIDE_PADDING);
+        const spreadX = map(index, 0, wordToDraw.length - 1, SIDE_PADDING, width - SIDE_PADDING);
         const letterX = lerp(compactX, spreadX, spreadProgress);
 
-        fill(255);
-        text(WORD[index], letterX, y);
+        fill(wordColour);
+        text(wordToDraw[index], letterX, y);
         x += letterWidths[index];
     }
 }
