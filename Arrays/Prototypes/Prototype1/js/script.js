@@ -1,5 +1,5 @@
 /**
- * Variables Prototype 1
+ * Arrays Prototype 1
  * Chloe Tso
  *
  * Ten rows of text open from the center, hold, and close in sequence.
@@ -8,7 +8,12 @@
 "use strict";
 
 // variables here are all fixed in the rest of the code
-const WORD = "transformative";
+const WORDS = ["transformative", "ephemeral", "interactive", "immersive", "ethereal", "reflection", "translucent", "dynamic", "dreamlike", "radiant", "captivating", "enchanting"];
+
+const COLOURS = ["#FF6B6B", "#4ECDC4", "#45AAF2", "#FDCB6E",
+ "#A8E6CF", "#DED5C4", "#FF8B94", "#A29BFE", "#00CEC9", "#FAB1A0", "#E84393", "#6C5CE7" ];
+
+
 const ROW_COUNT = 12;
 const OPEN_TIME = 500;
 const HOLD_TIME = 50;
