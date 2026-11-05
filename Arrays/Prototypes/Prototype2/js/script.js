@@ -8,10 +8,12 @@
 
 "use strict";
 
+// variables for the maximum and minimum size of the balls, as well as the easing factor for smooth movement
 const MAXSIZE = 40;
 const MINSIZE = 5;
 const EASING = 0.1;
 
+// arryas to store position and number of balls
 let ballPosition = [];
 let ballNum = []; 
 
@@ -33,6 +35,10 @@ function draw() {
 background(255);
 
 
+
+// this for loop iterates through the ballPosition array and updates each position based on the mouse position and the position of the previous ball in the array. 
+// the first ball follows the mouse, while subsequent balls follow the previous ball
+
     for (let i = 0; i < ballPosition.length; i++) {
         let targetX, targetY;
         
@@ -45,7 +51,7 @@ background(255);
             targetX = ballPosition[i - 1].x;
             targetY = ballPosition[i - 1].y;
         }
-
+// applying easing to create a smoother movement
         ballPosition[i].x += (targetX - ballPosition[i].x) * EASING;
         ballPosition[i].y += (targetY - ballPosition[i].y) * EASING;
 
@@ -62,11 +68,13 @@ background(255);
         let currentOpacity = map(i, 0, ballPosition.length - 1, 255, 50);
 
 
+        // drawing the balls of different size based on the index
         fill(0, currentOpacity);
         noStroke();
         ellipse(position.x, position.y, currentSize, currentSize);
 
 
+        // text display on top
         fill(100);
         textSize(20);
         textAlign(CENTER, CENTER);
