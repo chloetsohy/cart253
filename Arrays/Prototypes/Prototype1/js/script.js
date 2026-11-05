@@ -13,6 +13,7 @@ const WORDS = ["transformative", "ephemeral", "interactive", "immersive", "ether
 const COLOURS = ["#FF6B6B", "#4ECDC4", "#45AAF2", "#FDCB6E",
  "#A8E6CF", "#DED5C4", "#FF8B94", "#A29BFE", "#00CEC9", "#FAB1A0", "#E84393", "#6C5CE7" ];
 
+ const SPEED = [1.0, 1.3, 0.6, 1.5, 0.8, 1.2, 1.0, 1.4, 0.9, 1.6, 1.1, 1.3];
 
 const ROW_COUNT = 12;
 const OPEN_TIME = 500;
@@ -45,7 +46,14 @@ function draw() {
     for (let row = 0; row < ROW_COUNT; row++) {
         const rowStart = row * ROW_DELAY;
         const timeSinceStart = elapsed - rowStart;
-        const rowProgress = timeSinceStart < 0 ? 0 : getSpreadProgress(timeSinceStart % LOOP_TIME);
+
+        let rowProgress;
+        if (timeSinceStart < 0) {
+            rowProgress = 0;
+        } else {
+            rowProgress = getSpreadProgress(timeSinceStart % LOOP_TIME);
+        }
+
         // conditional to ensure that the rowProgress is 0 if the row hasn't started yet
         drawWord(rowHeight * (row + 1), rowProgress);
     }
