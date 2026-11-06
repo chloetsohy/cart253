@@ -62,7 +62,7 @@ This website provides documentation of my prototyping work in CART 253. It featu
 | Flow | Incremental Tails | Spark Secrets |
 | :---: | :---: | :---: |
 | ![Prototype 1](images/arrays1.png) | ![Prototype 2](images/arrays2.png) | ![Prototype 3](images/arrays3.png) |
-| [View Flow Online](https://chloetsohy.github.io/cart253/Arrays/Prototypes/Prototype1/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Arrays/Prototypes/Prototype1) | [View Incremental Tails Online](https://chloetsohy.github.io/cart253/Arrays/Prototypes/Prototype2/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Arrays/Prototypes/Prototype2) | [View Tomodachi Online](https://chloetsohy.github.io/cart253/Arrays/Prototypes/Prototype3/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Arrays/Prototypes/Prototype3) |
+| [View Flow Online](https://chloetsohy.github.io/cart253/Arrays/Prototypes/Prototype1/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Arrays/Prototypes/Prototype1) | [View Incremental Tails Online](https://chloetsohy.github.io/cart253/Arrays/Prototypes/Prototype2/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Arrays/Prototypes/Prototype2) | [View Spark Secrets Online](https://chloetsohy.github.io/cart253/Arrays/Prototypes/Prototype3/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Arrays/Prototypes/Prototype3) |
 
 
 ## My Personal Work Examples
