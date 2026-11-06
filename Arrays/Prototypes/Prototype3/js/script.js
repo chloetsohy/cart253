@@ -54,6 +54,18 @@ function draw() {
                 obj.y += obj.vy; // drifting up or down
 
 
+                // BOUNDARY CHECKING, ensures the letters dont go off screen, if they do they will bounce back
+                let padding = obj.size / 2; // padding to prevent text from going off screen
+
+                if (obj.x < padding || obj.x > width - padding) {
+                    obj.vx *= -1; 
+                    obj.x = constrain(obj.x, padding, width - padding); // keep the text within the canvas
+                }
+                if (obj.y < padding || obj.y > height - padding) {
+                    obj.vy *= -1; 
+                    obj.y = constrain(obj.y, padding, height - padding); 
+                }
+
                 textSize(obj.size);
                 text(obj.character, obj.x, obj.y);
             }
