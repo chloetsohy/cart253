@@ -70,3 +70,16 @@ I hope that others looking at my work will understand that parameters are able t
 I am eager to develop these types of work further by combining custon functions with external data sets, espesically exploring how imported data can dynamically alter visual interfaces and layouts in a program. One example is using images to create repetitions.
 
 ![Functions example](images/functions_example.jpg)
+
+
+
+## 05/11/2026 - Prototyping arrays
+This prototype allowed me to build on directly what I learnt last week with custom functions and conditionals. One particular combination I used was arrays and for loops, which permitted me to store multiple coordinates and properties in a single container and manipulate them simultaneously. 
+
+What surprised me was how efficient this setup handles repetition. One example can be seen through my second prototype, where I was able to seamlessly create circles that followed one path (the cursor's path). I also found it very satisfying to create different opacities for similar variables, forming a unique and dimensional trail that appeared as if I was using WebGL. 
+
+However, a major difficulty was syncing timers and arrays, particularly in my first prototype. As each word had a different rate, the timeSinceStart would overflow or fall out of alignment with other shared timing consts. In order to fix this, I needed to implement conditional checks to ensure rowProgress safety defaults to 0 until flow pattern begins again. 
+
+Through these projects, I hope others will be inspired to take old artworks and improve/enhance it's existing features. My 3rd prototype is a prime example, where I decided to create a more abstract yet realistic appearance by including burst sparks. Looking ahead, I hope to use arrays to further experiment how it can also affect sound files, such as storing sound frequencies and mapping it to shapes, colours etc.
+
+Difficult to find an image, hence this is a youtube link of effects I would like to attempt - mapping waves based on the sounds: https://www.youtube.com/shorts/YdtRe2rnRE0 
