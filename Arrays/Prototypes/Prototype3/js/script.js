@@ -9,6 +9,7 @@
 
 let inputText;
 let fallingText = []; // array to hold the falling text objects
+let sparks = []; // array to hold the spark objects
 let state = "entering"; // initial state
 
 // set up the canvas
@@ -60,17 +61,31 @@ function draw() {
                 if (obj.x < padding || obj.x > width - padding) {
                     obj.vx *= -1; 
                     obj.x = constrain(obj.x, padding, width - padding); // keep the text within the canvas
+                    createSpark(obj.x, obj.y); // create a spark at the position of the character that hit the boundary
                 }
                 if (obj.y < padding || obj.y > height - padding) {
                     obj.vy *= -1; 
                     obj.y = constrain(obj.y, padding, height - padding); 
+                    createSpark(obj.x, obj.y); 
                 }
 
                 textSize(obj.size);
                 text(obj.character, obj.x, obj.y);
             }
+
+            noStroke();
+            for (let i=sparks.length-1; i>=0; i--){
+                let s = sparks[i];
+                s.x += s.vx;
+                s.y += s.vy;
+                s.opacity -= 5; // fade out the spark
+                
+                fill(145, 193, 255, s.opacity);
+                ellipse(s.x, s.y, 5);
         }
-}
+        }
+    }
+
 
 
 function enteringState(){
@@ -108,4 +123,15 @@ function fallingState(){
             size: random(10, 30),
         });
     }
+}
+
+function createSpark(x, y) {
+
+    sparks.push({
+        x: x,
+        y: y,
+        vx: random(-2, 2), // random velocity for spark
+        vy: random(-2, 2),
+        opacity: 255 // initial opacity of the spark
+    });
 }
