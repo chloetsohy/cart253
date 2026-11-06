@@ -126,7 +126,9 @@ function fallingState(){
 }
 
 function createSpark(x, y) {
+    let amount = random(5, 10); // random number of sparks to create
 
+    for (let i = 0; i < amount; i++) {
     sparks.push({
         x: x,
         y: y,
@@ -134,4 +136,5 @@ function createSpark(x, y) {
         vy: random(-2, 2),
         opacity: 255 // initial opacity of the spark
     });
+}
 }
