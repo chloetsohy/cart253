@@ -82,4 +82,4 @@ However, a major difficulty was syncing timers and arrays, particularly in my fi
 
 Through these projects, I hope others will be inspired to take old artworks and improve/enhance it's existing features. My 3rd prototype is a prime example, where I decided to create a more abstract yet realistic appearance by including burst sparks. Looking ahead, I hope to use arrays to further experiment how it can also affect sound files, such as storing sound frequencies and mapping it to shapes, colours etc.
 
-Difficult to find an image, hence this is a youtube link of effects I would like to attempt - mapping waves based on the sounds: [Click here to Youtube Link](https://www.youtube.com/shorts/YdtRe2rnRE0 )
+Difficult to find an image, hence this is a youtube link of effects I would like to attempt - mapping waves based on the sounds: [Click here to Youtube Link](https://www.youtube.com/shorts/YdtRe2rnRE0)
