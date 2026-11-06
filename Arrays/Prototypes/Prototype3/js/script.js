@@ -50,7 +50,11 @@ function draw() {
 
             // loop through the fallingText array and update the position of each character
             for(let obj of fallingText){
-                obj.y += obj.speed;
+                obj.x += obj.vx; // drifting left and right
+                obj.y += obj.vy; // drifting up or down
+
+
+                textSize(obj.size);
                 text(obj.character, obj.x, obj.y);
             }
         }
@@ -71,17 +75,25 @@ function keyPressed(){
 
 
 function fallingState(){
+    let secret = inputText.value(); // get the value of the input box
     // remove the input box
     inputText.remove();
 
     // for loop to loop through each character in input text, create object w random variables and push to the fallingText array
-    for (let character of inputText.value()){
+    for(let i = 0; i < secret.length; i++){
+        let character = secret[i];
+
+
+        let startX = width/2 - (secret.length*10)+(i*20); // starting x position for each character, centered on the canvas
+        let startY = height/2;
 
         fallingText.push({
             character: character,
-            x: random(width),
-            y: random(-200, -20),
-            speed: random(1, 4),
+            x: startX,
+            y: startY,
+            vx: random(-4, 4), // allowing it to drift around
+            vy: random(-4, 4),
+            size: random(10, 30),
         });
     }
 }
