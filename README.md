@@ -65,14 +65,6 @@ This website provides documentation of my prototyping work in CART 253. It featu
 | [View Flow Online](https://chloetsohy.github.io/cart253/Arrays/Prototypes/Prototype1/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Arrays/Prototypes/Prototype1) | [View Incremental Tails Online](https://chloetsohy.github.io/cart253/Arrays/Prototypes/Prototype2/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Arrays/Prototypes/Prototype2) | [View Spark Secrets Online](https://chloetsohy.github.io/cart253/Arrays/Prototypes/Prototype3/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Arrays/Prototypes/Prototype3) |
 
 
-## My Personal Work Examples
-
-Here are some examples of my personal works! I particularly enjoy exploring different creative mediums!!
-  
-![3D Modelling example](images/3d%20modelling.jpg)
-![Illustration examples](images/illustration.png)
-
-
 
 ## Attribution
 
