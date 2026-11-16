@@ -61,4 +61,7 @@ function drawMenu() {
   text("Press ENTER to start", width/2, height/2 + 50);
 
   pop();
+
+
+  
 }

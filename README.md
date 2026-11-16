@@ -1,1 +1,88 @@
-Please click on project 1 to view the complete website.
+# Chloe Tso's Website
+
+Welcome to my course website!
+
+![Website Banner](images/banner.jpg)
+
+
+## Description of Website
+
+This website provides documentation of my prototyping work in CART 253. It features a variety of interactive projects and creative experiments. I hope to explore a range of creative mediums, from using javascript to p5.js to Figma, allowing myself to expand my insight towards prototyping and artistic expressions.
+
+> Looking forward to what I will achieve in this course!
+
+
+## My Journal
+* [Read my journals](journal.md)
+
+
+## Instruction Prototypes
+
+| My Little House | Patterns | Oddness |
+| :---: | :---: | :---: |
+| ![Prototype 1](images/prototype1_image.png) | ![Prototype 2](images/prototype2_image.png) | ![Prototype 3](images/prototype3_image.png) |
+| [View House Online](https://chloetsohy.github.io/cart253/instructions-prototype-1/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/instructions-prototype-1) | [View Patterns Online](https://chloetsohy.github.io/cart253/instructions-prototype-2/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/instructions-prototype-2) | [View Oddness Online](https://chloetsohy.github.io/cart253/instructions-prototype-3/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/instructions-prototype-3) |
+
+
+## Variables Prototypes
+
+| Flowy | Candy Floss | Tomato Vision |
+| :---: | :---: | :---: |
+| ![Prototype 1](images/variables1.png) | ![Prototype 2](images/variables2.png) | ![Prototype 3](images/variables3.png) |
+| [View Flowy Online](https://chloetsohy.github.io/cart253/Variables/Prototypes/Prototype1/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Variables/Prototypes/Prototype1) | [View Patterns Online](https://chloetsohy.github.io/cart253/Variables/Prototypes/Prototype2/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Variables/Prototypes/Prototype2) | [View Tomato Vision Online](https://chloetsohy.github.io/cart253/Variables/Prototypes/Prototype3/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Variables/Prototypes/Prototype3) |
+
+
+## Conditionals Prototypes
+
+| Pixel Art Game | Colour Spins | What's your luck? |
+| :---: | :---: | :---: |
+| ![Prototype 1](images/conditionals1.png) | ![Prototype 2](images/conditionals2.jpg) | ![Prototype 3](images/conditionals3.png) |
+| [View Pixel Art Game Online](https://chloetsohy.github.io/cart253/Conditionals/Prototypes/Prototype1/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Conditionals/Prototypes/Prototype1) | [View Colour Spins Online](https://chloetsohy.github.io/cart253/Conditionals/Prototypes/Prototype2/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Conditionals/Prototypes/Prototype2) | [View What's your luck Online](https://chloetsohy.github.io/cart253/Conditionals/Prototypes/Prototype3/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Conditionals/Prototypes/Prototype3) |
+   
+
+## Events Prototypes
+
+| Rhythm Game | Falling Secrets | Alphabet Proximity |
+| :---: | :---: | :---: |
+| ![Prototype 1](images/events1.png) | ![Prototype 2](images/events2.png) | ![Prototype 3](images/events3.png) |
+| [View Rhythm Game Online](https://chloetsohy.github.io/cart253/Events/Prototypes/Prototype1/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Events/Prototypes/Prototype1) | [View Falling Secrets Online](https://chloetsohy.github.io/cart253/Events/Prototypes/Prototype2/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Events/Prototypes/Prototype2) | [View Alphabet Proximity Online](https://chloetsohy.github.io/cart253/Events/Prototypes/Prototype3/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Events/Prototypes/Prototype3) |
+
+
+## Functions Prototypes
+
+| Paint Simulator | RGB Mixer | Tomodachi |
+| :---: | :---: | :---: |
+| ![Prototype 1](images/functions1.png) | ![Prototype 2](images/functions2.png) | ![Prototype 3](images/functions3.png) |
+| [View Paint Simulator Online](https://chloetsohy.github.io/cart253/Functions/Prototypes/Prototype1/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Functions/Prototypes/Prototype1) | [View RGB Mixer Online](https://chloetsohy.github.io/cart253/Functions/Prototypes/Prototype2/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Functions/Prototypes/Prototype2) | [View Tomodachi Online](https://chloetsohy.github.io/cart253/Functions/Prototypes/Prototype3/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Functions/Prototypes/Prototype3) |
+
+
+
+## Arrays Prototypes
+
+| Flow | Incremental Tails | Spark Secrets |
+| :---: | :---: | :---: |
+| ![Prototype 1](images/arrays1.png) | ![Prototype 2](images/arrays2.png) | ![Prototype 3](images/arrays3.png) |
+| [View Flow Online](https://chloetsohy.github.io/cart253/Arrays/Prototypes/Prototype1/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Arrays/Prototypes/Prototype1) | [View Incremental Tails Online](https://chloetsohy.github.io/cart253/Arrays/Prototypes/Prototype2/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Arrays/Prototypes/Prototype2) | [View Spark Secrets Online](https://chloetsohy.github.io/cart253/Arrays/Prototypes/Prototype3/)<br>[Click for the Repository](https://github.com/chloetsohy/cart253/tree/main/Arrays/Prototypes/Prototype3) |
+
+
+## My Personal Work Examples
+
+Here are some examples of my personal works! I particularly enjoy exploring different creative mediums!!
+  
+![3D Modelling example](images/3d%20modelling.jpg)
+![Illustration examples](images/illustration.png)
+
+
+
+## Attribution
+
+Below is a list of assets that have been used in this project:
+> - This project uses [Markdown](https://www.markdownguide.org/).
+> - The banner image is a evening blue sky from magnific.com: https://www.magnific.com/free-photos-vectors/evening-blue/46
+
+
+## License
+
+This work is produced by Chloe Tso as part of CART 253's coursework.
+
+> This project is licensed under a Creative Commons Attribution ([CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en)) license with the exception of libraries and other components with their own licenses.
