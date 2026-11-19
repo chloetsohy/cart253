@@ -9,13 +9,17 @@
 "use strict";
 
 let screen = "menu";
+let bgSvg;
 
 // the 4 main keys for the game
 const keys = ["D", "F", "J", "K"];
 
+
 // setup description
-function setup() {
+async function setup() {
   createCanvas(windowWidth, windowHeight);
+
+  bgSvg = await loadImage("../assets/images/background.png");
 
   textFont("Courier New");
 }
@@ -26,6 +30,8 @@ function setup() {
 */
 function draw() {
   background('#ffffff');
+
+  image(bgSvg, 0, 0, width, height);
 
   if (screen === "menu") {
       drawMenu();
@@ -44,6 +50,9 @@ function draw() {
   }
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
 
 function drawMenu() {
   
@@ -51,17 +60,26 @@ function drawMenu() {
   fill('grey');
 
   textFont("Monospace");
-  textSize(60);
+  textSize(55);
   textStyle(BOLD);
   textAlign(CENTER, CENTER);
-  text("Welcome to XXX", width/2, height/2 - 75);
+  text("Welcome to Cozy Notes", width/2, height/2 - 75);
 
   textStyle(NORMAL);
-  textSize(40);
+  textSize(30);
   text("Press ENTER to start", width/2, height/2 + 50);
 
+  if (keyIsPressed && keyCode === ENTER) {
+    screen = "songs";
+  }
   pop();
-
-
   
+}
+
+
+function drawSongs() {
+  push();
+
+
+
 }
