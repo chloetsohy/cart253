@@ -83,3 +83,14 @@ However, a major difficulty was syncing timers and arrays, particularly in my fi
 Through these projects, I hope others will be inspired to take old artworks and improve/enhance it's existing features. My 3rd prototype is a prime example, where I decided to create a more abstract yet realistic appearance by including burst sparks. Looking ahead, I hope to use arrays to further experiment how it can also affect sound files, such as storing sound frequencies and mapping it to shapes, colours etc.
 
 Difficult to find an image, hence this is a youtube link of effects I would like to attempt - mapping waves based on the sounds: [Click here to Youtube Link](https://www.youtube.com/shorts/YdtRe2rnRE0)
+
+
+
+## 19/11/2026 - Reflective Project 1
+For my final project, I decided to work on a rhythm game that extended my previous project from events. I initially began investigating existing rhythm games to draw inspirations from. Through this exploration, I was able to discover how the overall UI functions works, specially with the button presses. 
+
+To start, I first used Illustrator to draw the background - a neon city vibe paired with pixelated fonts for a 'video game' effect. Using preload, I integrated the image as the background, and also loaded a custom font to use as the text.
+
+I decided to create 4 main pages - menu, songs, game and results. Songs will allow the user to select pre-loaded songs, or have the choice to add a mp3 file from their device to use your own songs.
+
+In order to show users that certain song is selected, I made the song box enlarge a little when the mouse is hovered over it. 
