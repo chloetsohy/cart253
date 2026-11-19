@@ -57,13 +57,13 @@ function windowResized() {
 function drawMenu() {
   
   push();
-  fill('grey');
+  fill('white');
 
   textFont("Monospace");
   textSize(55);
   textStyle(BOLD);
   textAlign(CENTER, CENTER);
-  text("Welcome to Cozy Notes", width/2, height/2 - 75);
+  text("Welcome to Cozy Notes", width/2, height/2 - 350);
 
   textStyle(NORMAL);
   textSize(30);
