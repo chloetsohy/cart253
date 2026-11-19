@@ -67,9 +67,12 @@ async function drawMenu() {
   textAlign(CENTER, CENTER);
   text("Welcome to Cozy Notes", width/2, height/2 - 340);
 
-  textStyle(NORMAL);
-  textSize(30);
-  text("Press ENTER to start", width/2, height/2 + 440);
+
+  if (frameCount % 60 < 40) {
+    textStyle(NORMAL);
+    textSize(25);
+    text("Press Enter to start...", width/2, height/2 + 443);
+  }
 
   if (keyIsPressed && keyCode === ENTER) {
     screen = "songs";
