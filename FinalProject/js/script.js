@@ -10,6 +10,7 @@
 
 let screen = "menu";
 let bgSvg;
+let customFont;
 
 // the 4 main keys for the game
 const keys = ["D", "F", "J", "K"];
@@ -20,8 +21,9 @@ async function setup() {
   createCanvas(windowWidth, windowHeight);
 
   bgSvg = await loadImage("../assets/images/background.png");
+  customFont = await loadFont("../assets/Minecraft.ttf");
 
-  textFont("Courier New");
+  textFont(customFont);
 }
 
 
@@ -54,20 +56,20 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 
-function drawMenu() {
+async function drawMenu() {
   
   push();
   fill('white');
 
-  textFont("Monospace");
-  textSize(55);
+  textFont(customFont);
+  textSize(70);
   textStyle(BOLD);
   textAlign(CENTER, CENTER);
-  text("Welcome to Cozy Notes", width/2, height/2 - 350);
+  text("Welcome to Cozy Notes", width/2, height/2 - 340);
 
   textStyle(NORMAL);
   textSize(30);
-  text("Press ENTER to start", width/2, height/2 + 50);
+  text("Press ENTER to start", width/2, height/2 + 440);
 
   if (keyIsPressed && keyCode === ENTER) {
     screen = "songs";
