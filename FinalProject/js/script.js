@@ -2,8 +2,7 @@
  * Rhythm Game
  * Chloe Tso
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Rhythm game description.
  */
 
 "use strict";
@@ -16,6 +15,8 @@ let songImg3;
 
 let angelBite;
 let badApple;
+
+let glowAmount;
 
 let arrowImg;
 let cursorImg;
@@ -35,6 +36,7 @@ async function setup() {
   songImg1 = await loadImage("../assets/images/songImg.png");
   songImg3 = await loadImage("../assets/images/songImg3.png");
 
+  angelBite = await loadSound("../assets/sounds/angelBite.mp3");
   badApple = await loadSound("../assets/sounds/badApple.mp3");
 
 
@@ -123,9 +125,9 @@ function drawSongs() {
 
 
 
-  drawRect(width / 2 - 500, height / 2 + 30, 420, 500, 4, "Angel Bite", songImg1);
-  drawRect(width / 2 + 0, height / 2 + 30, 420, 500, 4, "Sweetest Escape", songImg1);
-  drawRect(width / 2 + 500, height / 2 + 30, 420, 500, 4, "Bad Apple", songImg3);
+  drawRect(width / 2 - 500, height / 2 + 30, 420, 500, 4, "Angel Bite", songImg1, "Length: 76 seconds");
+  drawRect(width / 2 + 0, height / 2 + 30, 420, 500, 4, "Sweetest Escape", songImg1, "Length: 90 seconds");
+  drawRect(width / 2 + 500, height / 2 + 30, 420, 500, 4, "Bad Apple", songImg3, "Length: 42 seconds");
   pop();
 
 
@@ -133,9 +135,7 @@ function drawSongs() {
 
 
 
-function drawRect(x, y, rectWidth, rectHeight, radius, songTitle, songImg) {
-
-
+function drawRect(x, y, rectWidth, rectHeight, radius, songTitle, songImg, length) {
 
   push();
   rectMode(CENTER);
@@ -149,14 +149,25 @@ function drawRect(x, y, rectWidth, rectHeight, radius, songTitle, songImg) {
     rectWidth += 20;
     rectHeight += 20;
 
+
+
     if (mouseIsPressed && screen != "game") {
       screen = "game";
+
+      if (songTitle === "Angel Bite") {
+        angelBite.play();
+      }
+
+      if (songTitle === "Bad Apple") {
+        badApple.play();
+      }
     }
   }
 
 
   rect(x, y, rectWidth, rectHeight, radius);
   pop();
+
 
   push();
   fill(255);
@@ -166,7 +177,8 @@ function drawRect(x, y, rectWidth, rectHeight, radius, songTitle, songImg) {
   text(songTitle);
   text(songTitle, x, y - rectHeight / 2 + 50);
 
-  text("Click to play!", x, y - rectHeight / 2 + 450);
+  textSize(20);
+  text(length, x, y - rectHeight / 2 + 450);
   pop();
 
 
@@ -186,17 +198,56 @@ function drawGame() {
   noCursor();
   push();
   rectMode(CENTER);
+
+
   noStroke();
-  fill('pink');
+  fill(0, 150);
+  strokeWeight(2);
+  stroke(255);
+  rect(width / 2, height / 2, 630, 821);
 
-  rhythmRect(width * 3 / 9, height / 2, 150, 900, 7, 'pink');
-  rhythmRect(width * 4 / 9, height / 2, 150, 900, 7, 'beige');
-  rhythmRect(width * 5 / 9, height / 2, 150, 900, 7, 'pink');
-  rhythmRect(width * 6 / 9, height / 2, 150, 900, 7, 'beige');
 
+  push();
+  stroke(255, 153);
+  strokeWeight(2);
+  let topY = height / 2 - 821 / 2;
+  let bottomY = height / 2 + 821 / 2;
+  line(width * 4.5 / 11, topY, width * 4.5 / 11, bottomY);
+  line(width * 5.5 / 11, topY, width * 5.5 / 11, bottomY);
+  line(width * 6.5 / 11, topY, width * 6.5 / 11, bottomY);
+  pop();
+
+  drawButton(width * 4 / 11, height / 2 + 320, 70, 70, 85, 85, 'KeyD');
+  drawButton(width * 5 / 11, height / 2 + 320, 70, 70, 85, 85, 'KeyF');
+  drawButton(width * 6 / 11, height / 2 + 320, 70, 70, 85, 85, 'KeyJ');
+  drawButton(width * 7 / 11, height / 2 + 320, 70, 70, 85, 85, 'KeyK');
 
   pop();
+
 }
+
+function drawButton(x, y, s1, s2, o1, o2, keyNum) {
+  push();
+
+  fill('white');
+  ellipse(x, y, s1, s2);
+  pop();
+
+  push();
+  noFill();
+  stroke('white');
+  strokeWeight(3);
+
+  if (keyIsDown(keyNum)) {
+    ellipse(x, y, o1 + 20, o2 + 20);
+  }
+  else {
+    ellipse(x, y, o1, o2);
+  }
+  pop();
+}
+
+
 
 function rhythmRect(x, y, rectWidth, rectHeight, radius, fillColour) {
   push();
