@@ -7,16 +7,15 @@
 
 "use strict";
 
-let screen = "songs";
+let screen = "menu";
 let bgSvg;
 let customFont;
 let songImg1;
 let songImg2;
 let songImg3;
 
-let angelBite;
-let iconicHeart;
-let badApple;
+let songs = [];
+let currentSong = null;
 
 let glowAmount;
 
@@ -36,14 +35,31 @@ async function setup() {
 
   bgSvg = await loadImage("../assets/images/background.png");
   customFont = await loadFont("../assets/Minecraft.ttf");
-  songImg1 = await loadImage("../assets/images/songImg1.png");
-  songImg2 = await loadImage("../assets/images/songImg2.png");
-  songImg3 = await loadImage("../assets/images/songImg3.png");
 
-  angelBite = await loadSound("../assets/sounds/angelBite.mp3");
-  badApple = await loadSound("../assets/sounds/badApple.mp3");
-  iconicHeart = await loadSound("../assets/sounds/iconicHeart.mp3");
-
+  // load songs and images into array
+  songs = [
+    {
+      title: "Angel Bite",
+      artist: "TXT",
+      length: 76,
+      img: await loadImage("../assets/images/songImg1.png"),
+      sound: await loadSound("../assets/sounds/angelBite.mp3")
+    },
+    {
+      title: "Iconic Heart",
+      artist: "Hearts2Hearts",
+      length: 90,
+      img: await loadImage("../assets/images/songImg2.png"),
+      sound: await loadSound("../assets/sounds/iconicHeart.mp3")
+    },
+    {
+      title: "Bad Apple",
+      artist: "Alstroemeria Records & ZUN",
+      length: 42,
+      img: await loadImage("../assets/images/songImg3.png"),
+      sound: await loadSound("../assets/sounds/badApple.mp3")
+    }
+  ];
 
   textFont(customFont);
 }
@@ -87,13 +103,13 @@ function drawMenu() {
   textSize(70);
   textStyle(BOLD);
   textAlign(CENTER, CENTER);
-  text("Welcome to Cozy Notes", width / 2, height / 2 - 340);
+  text("Welcome to Cozy Notes", width / 2, height / 2 - 310);
 
 
   if (frameCount % 60 < 40) {
     textStyle(NORMAL);
     textSize(25);
-    text("Press any key to start...", width / 2, height / 2 + 380);
+    text("Press any key to start...", width / 2, height / 2 + 370);
   }
 
 
@@ -128,72 +144,57 @@ function drawSongs() {
   text("Select a song to play:", width / 2, height / 2 - 330);
 
 
+  for (let i = 0; i < songs.length; i++) {
+    let song = songs[i];
+    drawRect(width / 2 - 500 + i * 500, height / 2 + 30, 420, 500, 20, song);
+  }
 
-  drawRect(width / 2 - 500, height / 2 + 30, 420, 500, 20, "Angel Bite", songImg1, "by TXT\nLength: 76 seconds");
-  drawRect(width / 2 + 0, height / 2 + 30, 420, 500, 20, "Iconic Heart", songImg2, "by Hearts2Hearts\nLength: 90 seconds");
-  drawRect(width / 2 + 500, height / 2 + 30, 420, 500, 20, "Bad Apple", songImg3, "by Alstroemeria Records & ZUN\nLength: 42 seconds");
   pop();
-
 
 }
 
 
 
-function drawRect(x, y, rectWidth, rectHeight, radius, songTitle, songImg, length) {
 
+
+
+
+function drawRect(x, y, rectWidth, rectHeight, radius, song) {
   push();
   rectMode(CENTER);
   noStroke();
   fill(255, 100);
 
-  noStroke();
-  let hovering = mouseX > x - rectWidth / 2 && mouseX < x + rectWidth / 2 && mouseY > y - rectHeight / 2 && mouseY < y + rectHeight / 2;
+  let hovering = mouseX > x - rectWidth / 2 && mouseX < x + rectWidth / 2 &&
+    mouseY > y - rectHeight / 2 && mouseY < y + rectHeight / 2;
+
   if (hovering) {
     cursor(HAND);
     rectWidth += 20;
     rectHeight += 20;
 
-
-
-    if (mouseIsPressed && screen != "game") {
+    if (mouseIsPressed && screen !== "game") {
+      currentSong = song;
+      currentSong.sound.play();
       screen = "game";
-
-      if (songTitle === "Angel Bite") {
-        angelBite.play();
-      }
-
-      if (songTitle === "Iconic Heart") {
-        iconicHeart.play();
-      }
-
-      if (songTitle === "Bad Apple") {
-        badApple.play();
-      }
     }
   }
 
-
   rect(x, y, rectWidth, rectHeight, radius);
-  pop();
 
-
-  push();
   fill(255);
   textFont(customFont);
   textAlign(CENTER, CENTER);
   textSize(30);
-  text(songTitle);
-  text(songTitle, x, y - rectHeight / 2 + 50);
+  text(song.title, x, y - rectHeight / 2 + 50);
 
   textSize(20);
-  text(length, x, y - rectHeight / 2 + 450);
+  text(`by ${song.artist}\nLength: ${song.length} seconds`, x, y - rectHeight / 2 + 450);
+
+  song.img.resize(300, 0);
+  image(song.img, x - 150, y - rectHeight / 2 + 100);
   pop();
 
-
-  push();
-  songImg.resize(300, 0);
-  image(songImg, x - 150, y - rectHeight / 2 + 100);
-  pop();
 }
 
 
@@ -205,7 +206,7 @@ function drawGame() {
 
   noCursor();
   drawLanes();
-  // drawGameInfo();
+  drawGameInfo();
 
 }
 
@@ -264,25 +265,12 @@ function drawButton(x, y, w, h, label) {
 }
 
 
-// function drawGameInfo() {
-//   textAlign(LEFT, CENTER);
-//   textSize(20);
-//   textStyle(BOLD);
-//   text(songs[0].title, 20, 30);
-//   text(songs[0].length, 20, 60);
+function drawGameInfo() {
+  textAlign(LEFT, CENTER);
+  textSize(20);
+  textStyle(BOLD);
+  text(songs[0].title, 20, 30);
+  text(songs[0].length, 20, 60);
 
-
-
-//   let time = max(0, songs[0].length - songs[0].currentTime());
-
-//   text(`Time Remaining: ${time.toFixed(2)} seconds`, 20, 90);
-
-//   let progress = constrain(songs[0].currentTime() / songs[0].length, 0, 1);
-
-//   fill(45);
-//   rect(20, 120, width - 40, 20, 10);
-
-//   fill('black');
-//   rect(20, 120, (width - 40) * progress, 20, 10);
-// }
+}
 
