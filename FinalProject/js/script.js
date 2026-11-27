@@ -7,7 +7,7 @@
 
 "use strict";
 
-let screen = "menu";
+let screen = "songs";
 let bgSvg;
 let customFont;
 let songImg1;
@@ -207,6 +207,7 @@ function drawGame() {
   noCursor();
   drawLanes();
   drawGameInfo();
+  drawNotes();
 
 }
 
@@ -269,8 +270,20 @@ function drawGameInfo() {
   textAlign(LEFT, CENTER);
   textSize(20);
   textStyle(BOLD);
-  text(songs[0].title, 20, 30);
-  text(songs[0].length, 20, 60);
+
+  if (currentSong) {
+    fill('white');
+    text("Now Playing: " + currentSong.title, 40, 40);
+
+  }
 
 }
 
+
+
+
+function drawNotes() {
+
+
+
+}
