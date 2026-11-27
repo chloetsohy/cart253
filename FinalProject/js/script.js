@@ -7,7 +7,7 @@
 
 "use strict";
 
-let screen = "songs";
+let screen = "game";
 let bgSvg;
 let customFont;
 let songImg1;
@@ -28,6 +28,7 @@ const keys = ["D", "F", "J", "K"];
 // setup description
 async function setup() {
 
+  // await setupRhythm();
 
   createCanvas(windowWidth, windowHeight);
 
@@ -196,65 +197,63 @@ function drawRect(x, y, rectWidth, rectHeight, radius, songTitle, songImg, lengt
 function drawGame() {
 
   noCursor();
-  push();
-  rectMode(CENTER);
-
-
-  noStroke();
-  fill(0, 150);
-  strokeWeight(2);
-  stroke(255);
-  rect(width / 2, height / 2, 630, 821);
-
-
-  push();
-  stroke(255, 153);
-  strokeWeight(2);
-  let topY = height / 2 - 821 / 2;
-  let bottomY = height / 2 + 821 / 2;
-  line(width * 4.5 / 11, topY, width * 4.5 / 11, bottomY);
-  line(width * 5.5 / 11, topY, width * 5.5 / 11, bottomY);
-  line(width * 6.5 / 11, topY, width * 6.5 / 11, bottomY);
-  pop();
-
-  drawButton(width * 4 / 11, height / 2 + 320, 70, 70, 85, 85, 'KeyD');
-  drawButton(width * 5 / 11, height / 2 + 320, 70, 70, 85, 85, 'KeyF');
-  drawButton(width * 6 / 11, height / 2 + 320, 70, 70, 85, 85, 'KeyJ');
-  drawButton(width * 7 / 11, height / 2 + 320, 70, 70, 85, 85, 'KeyK');
-
-  pop();
+  drawLanes();
 
 }
 
-function drawButton(x, y, s1, s2, o1, o2, keyNum) {
-  push();
 
+function drawLanes() {
+
+  let laneWidth = min(155, width * 0.2);
+  let startX = (width - laneWidth * 4) / 2;
+  let topY = 40;
+  let hitY = height - 115;
+
+  push();
+  //draw the 4 lanes using for loop
+  for (let i = 0; i < 4; i++) {
+    let x = startX + i * laneWidth;
+
+    fill(0, 150);
+    stroke(255, 153);
+    strokeWeight(2);
+    rect(x + 3, topY, laneWidth - 6, hitY - topY + 20, 10);
+
+    // hit line
+    stroke(255);
+    strokeWeight(3);
+    line(x + 8, hitY, x + laneWidth - 8, hitY);
+
+    drawButton(x + laneWidth / 2, hitY + 52, laneWidth - 20, 50, keys[i]);
+  }
+
+  pop();
+}
+
+
+function drawButton(x, y, w, h, label) {
+  rectMode(CENTER);
+
+  noStroke();
   fill('white');
-  ellipse(x, y, s1, s2);
-  pop();
+  rect(x, y, w, h, 10);
 
-  push();
-  noFill();
-  stroke('white');
-  strokeWeight(3);
-
-  if (keyIsDown(keyNum)) {
-    ellipse(x, y, o1 + 20, o2 + 20);
+  // outline around the box while key is held
+  if (keyIsDown('Key' + label)) {
+    noFill();
+    stroke('white');
+    strokeWeight(3);
+    rect(x, y, w + 12, h + 12, 14);
   }
-  else {
-    ellipse(x, y, o1, o2);
-  }
-  pop();
-}
 
-
-
-function rhythmRect(x, y, rectWidth, rectHeight, radius, fillColour) {
-  push();
-  rectMode(CENTER);
+  fill(15);
   noStroke();
-  fill(fillColour);
+  textAlign(CENTER, CENTER);
+  textSize(24);
+  text(label, x, y);
 
-  rect(x, y, rectWidth, rectHeight, radius);
-  pop();
+  rectMode(CORNER);
 }
+
+
+
