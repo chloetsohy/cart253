@@ -94,3 +94,10 @@ To start, I first used Illustrator to draw the background - a neon city vibe pai
 I decided to create 4 main pages - menu, songs, game and results. Songs will allow the user to select pre-loaded songs, or have the choice to add a mp3 file from their device to use your own songs.
 
 In order to show users that certain song is selected, I made the song box enlarge a little when the mouse is hovered over it. 
+
+
+
+## 26/11/2026 - Reflective Project 2
+A little busy this week- but managed to complete most of the UI aspects of my rhythm game. On the songs page, it allows users to clearly choose a song out of the 3 provided and leads them to the game page.
+
+I was able to implement it through preload, and am looking to use FFT to detect wavelengths in order to extract exact parts of the audio for note generation.
