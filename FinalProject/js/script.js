@@ -7,13 +7,15 @@
 
 "use strict";
 
-let screen = "game";
+let screen = "songs";
 let bgSvg;
 let customFont;
 let songImg1;
+let songImg2;
 let songImg3;
 
 let angelBite;
+let iconicHeart;
 let badApple;
 
 let glowAmount;
@@ -34,12 +36,13 @@ async function setup() {
 
   bgSvg = await loadImage("../assets/images/background.png");
   customFont = await loadFont("../assets/Minecraft.ttf");
-  songImg1 = await loadImage("../assets/images/songImg.png");
+  songImg1 = await loadImage("../assets/images/songImg1.png");
+  songImg2 = await loadImage("../assets/images/songImg2.png");
   songImg3 = await loadImage("../assets/images/songImg3.png");
 
   angelBite = await loadSound("../assets/sounds/angelBite.mp3");
   badApple = await loadSound("../assets/sounds/badApple.mp3");
-
+  iconicHeart = await loadSound("../assets/sounds/iconicHeart.mp3");
 
 
   textFont(customFont);
@@ -126,9 +129,9 @@ function drawSongs() {
 
 
 
-  drawRect(width / 2 - 500, height / 2 + 30, 420, 500, 4, "Angel Bite", songImg1, "Length: 76 seconds");
-  drawRect(width / 2 + 0, height / 2 + 30, 420, 500, 4, "Sweetest Escape", songImg1, "Length: 90 seconds");
-  drawRect(width / 2 + 500, height / 2 + 30, 420, 500, 4, "Bad Apple", songImg3, "Length: 42 seconds");
+  drawRect(width / 2 - 500, height / 2 + 30, 420, 500, 20, "Angel Bite", songImg1, "by TXT\nLength: 76 seconds");
+  drawRect(width / 2 + 0, height / 2 + 30, 420, 500, 20, "Iconic Heart", songImg2, "by Hearts2Hearts\nLength: 90 seconds");
+  drawRect(width / 2 + 500, height / 2 + 30, 420, 500, 20, "Bad Apple", songImg3, "by Alstroemeria Records & ZUN\nLength: 42 seconds");
   pop();
 
 
@@ -157,6 +160,10 @@ function drawRect(x, y, rectWidth, rectHeight, radius, songTitle, songImg, lengt
 
       if (songTitle === "Angel Bite") {
         angelBite.play();
+      }
+
+      if (songTitle === "Iconic Heart") {
+        iconicHeart.play();
       }
 
       if (songTitle === "Bad Apple") {
@@ -198,6 +205,7 @@ function drawGame() {
 
   noCursor();
   drawLanes();
+  // drawGameInfo();
 
 }
 
@@ -256,4 +264,25 @@ function drawButton(x, y, w, h, label) {
 }
 
 
+// function drawGameInfo() {
+//   textAlign(LEFT, CENTER);
+//   textSize(20);
+//   textStyle(BOLD);
+//   text(songs[0].title, 20, 30);
+//   text(songs[0].length, 20, 60);
+
+
+
+//   let time = max(0, songs[0].length - songs[0].currentTime());
+
+//   text(`Time Remaining: ${time.toFixed(2)} seconds`, 20, 90);
+
+//   let progress = constrain(songs[0].currentTime() / songs[0].length, 0, 1);
+
+//   fill(45);
+//   rect(20, 120, width - 40, 20, 10);
+
+//   fill('black');
+//   rect(20, 120, (width - 40) * progress, 20, 10);
+// }
 
